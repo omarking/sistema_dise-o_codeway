@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Carrusel</h1><br>
+
+                    <p class="Q interlineado">
+                        Como su nombre lo indica el carrusel presenta una serie de contenido, imágenes o texto de forma
+                        continua y cíclica.
+                    </p><br>
+
+                    <h5 class="Q">Ejemplo simple:</h5>
+
+                    <p class="Q interlineado">
+                        En automatico cada 5 segundos cambiara la imagen.
+                        <br>
+                        Puede cambiar la animacion colocando la clase <b>.carousel-fade</b> despues de la clase
+                        <b>.slide</b>
+                        <br>
+                        Si desea modificar el intervalo, basta con agregar <b>data-bs-interval=""</b> con el intervalo
+                        en milisegundos
+                        para los elementos con la clase <b>.carousel-item</b>.
+                    </p>
+
+                    <div class="content-muestra">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/ilustraciones/pexels-christina-morillo-1181467.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="200">
+                                    <img src="../img/ilustraciones/pexels-cottonbro-5082579.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-mikhail-nilov-8296977.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"&#62;
+    &#60;div class="carousel-inner"&#62;
+        &#60;div class="carousel-item active"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item" data-bs-interval="2000"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo con controles:</h5>
+
+                    <p class="Q interlineado">
+                        En este caso, se recomienda utilizar <b>button</b>,
+                        pero puede usar elementos <b>a</b> con <b>role="button"</b>.
+                    </p>
+
+                    <div class="content-muestra Q">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/ilustraciones/pexels-christina-morillo-1181467.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-cottonbro-5082579.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-mikhail-nilov-8296977.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"&#62;
+    &#60;div class="carousel-inner"&#62;
+        &#60;div class="carousel-item active"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselExampleControls" data-bs-slide="prev"&#62;
+        &#60;span class="carousel-control-prev-icon" aria-hidden="true"&#62;&#60;/span&#62;
+        &#60;span class="visually-hidden"&#62;Previous&#60;/span&#62;
+    &#60;/button&#62;
+    &#60;button class="carousel-control-next" type="button"
+        data-bs-target="#carouselExampleControls" data-bs-slide="next"&#62;
+        &#60;span class="carousel-control-next-icon" aria-hidden="true"&#62;&#60;/span&#62;
+        &#60;span class="visually-hidden"&#62;Next&#60;/span&#62;
+    &#60;/button&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo con indicadores:</h5>
+
+                    <div class="content-muestra Q">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/ilustraciones/pexels-christina-morillo-1181467.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-cottonbro-5082579.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-mikhail-nilov-8296977.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"&#62;
+    &#60;div class="carousel-indicators"&#62;
+        &#60;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"&#62;&#60;/button&#62;
+        &#60;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"&#62;&#60;/button&#62;
+        &#60;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"&#62;&#60;/button&#62;
+    &#60;/div&#62;
+    &#60;div class="carousel-inner"&#62;
+        &#60;div class="carousel-item active"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"&#62;
+        &#60;span class="carousel-control-prev-icon" aria-hidden="true"&#62;&#60;/span&#62;
+        &#60;span class="visually-hidden"&#62;Previous&#60;/span&#62;
+    &#60;/button&#62;
+    &#60;button class="carousel-control-next" type="button"
+        data-bs-target="#carouselExampleIndicators" data-bs-slide="next"&#62;
+        &#60;span class="carousel-control-next-icon" aria-hidden="true"&#62;&#60;/span&#62;
+        &#60;span class="visually-hidden"&#62;Next&#60;/span&#62;
+    &#60;/button&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo completo:</h5>
+
+                    <div class="content-muestra Q">
+                        <div id="carouselExampleCaptions" class="carousel slide Q" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/ilustraciones/pexels-christina-morillo-1181467.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="L-bold text-dark">First slide label</h5>
+                                        <p class="text-dark">Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-cottonbro-5082579.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="L-bold">Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/ilustraciones/pexels-mikhail-nilov-8296977.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="L-bold">Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;div id="carouselExampleCaptions" class="carousel slide Q" data-bs-ride="carousel"&#62;
+    &#60;div class="carousel-indicators"&#62;
+        &#60;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"&#62;&#60;/button&#62;
+        &#60;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"&#62;&#60;/button&#62;
+        &#60;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"&#62;&#60;/button&#62;
+    &#60;/div&#62;
+    &#60;div class="carousel-inner"&#62;
+        &#60;div class="carousel-item active"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+            &#60;div class="carousel-caption d-none d-md-block"&#62;
+                &#60;h5 class="L-bold"&#62;First slide label&#60;/h5&#62;
+                &#60;p&#62;Some representative placeholder content for the first slide.&#60;/p&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+            &#60;div class="carousel-caption d-none d-md-block"&#62;
+                &#60;h5 class="L-bold"&#62;Second slide label&#60;/h5&#62;
+                &#60;p&#62;Some representative placeholder content for the second slide.&#60;/p&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+        &#60;div class="carousel-item"&#62;
+            &#60;img src="..." class="d-block w-100" alt="..."&#62;
+            &#60;div class="carousel-caption d-none d-md-block"&#62;
+                &#60;h5 class="L-bold"&#62;Third slide label&#60;/h5&#62;
+                &#60;p&#62;Some representative placeholder content for the third slide.&#60;/p&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"&#62;
+        &#60;span class="carousel-control-prev-icon" aria-hidden="true"&#62;&#60;/span&#62;
+        &#60;span class="visually-hidden"&#62;Previous&#60;/span&#62;
+    &#60;/button&#62;
+    &#60;button class="carousel-control-next" type="button"
+        data-bs-target="#carouselExampleCaptions" data-bs-slide="next"&#62;
+        &#60;span class="carousel-control-next-icon" aria-hidden="true"&#62;&#60;/span&#62;
+        &#60;span class="visually-hidden"&#62;Next&#60;/span&#62;
+    &#60;/button&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+            <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

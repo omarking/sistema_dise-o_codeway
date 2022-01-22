@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Buttons</h1><br>
+                    <p class="Q interlineado">
+                        Los botones proporcionan información sobre las acciones que se pueden hacer en pantalla
+                        cada uno con su propio propósito semántico, con algunos extras para un mayor control.
+                    </p><br>
+
+                    <button type="button" class="btn btn-primary Q">Primary</button>
+                    <button type="button" class="btn btn-secondary Q">Secondary</button>
+                    <button type="button" class="btn btn-success Q">Success</button>
+                    <button type="button" class="btn btn-danger Q">Danger</button>
+                    <button type="button" class="btn btn-warning Q">Warning</button>
+                    <button type="button" class="btn btn-info Q">Info</button>
+                    <button type="button" class="btn btn-light Q">Light</button>
+                    <button type="button" class="btn btn-dark Q">Dark</button>
+                    <button type="button" class="btn btn-link Q">Link</button>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;button type="button" class="btn btn-primary Q"&#62;Primary&#60;/button&#62;
+&#60;button type="button" class="btn btn-secondary Q"&#62;Secondary&#60;/button&#62;
+&#60;button type="button" class="btn btn-success Q"&#62;Success&#60;/button&#62;
+&#60;button type="button" class="btn btn-danger Q"&#62;Danger&#60;/button&#62;
+&#60;button type="button" class="btn btn-warning Q"&#62;Warning&#60;/button&#62;
+&#60;button type="button" class="btn btn-info Q"&#62;Info&#60;/button&#62;
+&#60;button type="button" class="btn btn-light Q"&#62;Light&#60;/button&#62;
+&#60;button type="button" class="btn btn-dark Q"&#62;Dark&#60;/button&#62;
+&#60;button type="button" class="btn btn-link Q"&#62;Link&#60;/button&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Etiquetas de botón</h3><br>
+
+                    <a class="btn btn-primary Q" href="#" role="button">Link</a>
+                    <button class="btn btn-primary Q" type="submit">Button</button>
+                    <input class="btn btn-primary Q" type="button" value="Input">
+                    <input class="btn btn-primary Q" type="submit" value="Submit">
+                    <input class="btn btn-primary Q" type="reset" value="Reset">
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;a class="btn btn-primary Q" href="#" role="button"&#62;Link&#60;/a&#62;
+&#60;button class="btn btn-primary Q" type="submit"&#62;Button&#60;/button&#62;
+&#60;input class="btn btn-primary Q" type="button" value="Input"&#62;
+&#60;input class="btn btn-primary Q" type="submit" value="Submit";
+&#60;input class="btn btn-primary Q" type="reset" value="Reset"&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Botones de contorno</h3>
+
+                    <p class="Q interlineado">
+                        Reemplace las clases de modificador predeterminadas con las <b>.btn-outline-*</b>.
+                    </p><br>
+
+                    <button type="button" class="btn btn-outline-primary Q">Primary</button>
+                    <button type="button" class="btn btn-outline-secondary Q">Secondary</button>
+                    <button type="button" class="btn btn-outline-success Q">Success</button>
+                    <button type="button" class="btn btn-outline-danger Q">Danger</button>
+                    <button type="button" class="btn btn-outline-warning Q">Warning</button>
+                    <button type="button" class="btn btn-outline-info Q">Info</button>
+                    <button type="button" class="btn btn-outline-light Q">Light</button>
+                    <button type="button" class="btn btn-outline-dark Q">Dark</button>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;button type="button" class="btn btn-outline-primary Q"&#62;Primary&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-secundary Q"&#62;Secundary&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-success Q"&#62;Success&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-danger Q"&#62;Danger&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-warning Q"&#62;Warning&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-info Q"&#62;Info&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-light Q"&#62;Light&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-dark Q"&#62;Dark&#60;/button&#62;
+&#60;button type="button" class="btn btn-outline-link Q"&#62;Link&#60;/button&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tamaños</h3>
+
+                    <p class="Q interlineado">
+                        Agregue <b>.btn-lg</b> o <b>.btn-sm</b> para tamaños adicionales.
+                    </p><br>
+
+                    <button type="button" class="btn btn-primary btn-lg Q">Large button</button>
+                    <button type="button" class="btn btn-secondary btn-lg Q">Large button</button>
+                    <button type="button" class="btn btn-primary btn-sm Q">Small button</button>
+                    <button type="button" class="btn btn-secondary btn-sm Q">Small button</button>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;button type="button" class="btn btn-primary btn-lg Q"&#62;Large button&#60;/button&#62;
+&#60;button type="button" class="btn btn-secondary btn-lg Q"&#62;Large button&#60;/button&#62;
+&#60;button type="button" class="btn btn-primary btn-sm Q"&#62;Small button&#60;/button&#62;
+&#60;button type="button" class="btn btn-secondary btn-sm Q"&#62;Small button&#60;/button&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Estado inactivo</h3>
+
+                    <p class="Q interlineado">
+                        Agregue el atributo booleano <b>disabled</b> a los elementos <b>&#60;buttons&#62;</b>. <br>
+                        Los botones deshabilitados que usan el elemento <b>&#60;a&#62;</b> no son compatibles con el
+                        atributo disabled,
+                        por lo que debe agregar la clase <b>.disabled</b> para que parezca visualmente deshabilitado.
+                        <br>
+                        Deben incluir el atributo <b>aria-disabled = "true"</b> para indicar el estado del elemento a
+                        las tecnologías de asistencia. <br>
+                        No deben incluir el atributo <b>href</b>.
+                    </p><br>
+
+                    <button type="button" class="btn btn-lg btn-primary Q" disabled>Primary button</button>
+                    <button type="button" class="btn btn-secondary btn-lg Q" disabled>Button</button>
+                    <a class="btn btn-primary btn-lg disabled Q" role="button" aria-disabled="true">Primary link</a>
+                    <a class="btn btn-secondary btn-lg disabled Q" role="button" aria-disabled="true">Link</a>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;button type="button" class="btn btn-lg btn-primary Q" disabled&#62;Primary button&#60;/button&#62;
+&#60;button type="button" class="btn btn-secondary btn-lg Q" disabled&#62;Button&#60;/button&#62;
+&#60;a class="btn btn-primary btn-lg disabled Q" role="button" aria-disabled="true"&#62;Primary link&#60;/a&#62;
+&#60;a class="btn btn-secondary btn-lg disabled Q" role="button" aria-disabled="true"&#62;Link&#60;/a&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="group">Grupo de botones</h1><br>
+
+                    <h3 class="Q" id="group">Ejemplo básico</h3>
+
+                    <p class="Q interlineado">
+                        Envuelva una serie de botones con la clase <b>.btn</b> en <b>.btn-group</b>.
+                    </p><br>
+
+                    <div class="btn-group Q" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;div class="btn-group Q" role="group" aria-label="Basic example"&#62;
+    &#60;button type="button" class="btn btn-primary"&#62;Left&#60;/button&#62;
+    &#60;button type="button" class="btn btn-primary"&#62;Middle&#60;/button&#62;
+    &#60;button type="button" class="btn btn-primary"&#62;Right&#60;/button&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="btn-group Q">
+                        <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
+                        <a href="#" class="btn btn-primary">Link</a>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;div class="btn-group Q"&#62;
+    &#60;a href="#" class="btn btn-primary active" aria-current="page"&#62;Active Link&#60;/a&#62;
+    &#60;a href="#" class="btn btn-primary"&#62;Link&#60;/a&#62;
+    &#60;a href="#" class="btn btn-primary"&#62;Link&#60;/a&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Estilos mixtos</h3>
+
+                    <br>
+
+                    <div class="btn-group Q" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger">Left</button>
+                        <button type="button" class="btn btn-warning">Middle</button>
+                        <button type="button" class="btn btn-success">Right</button>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code8">&#60;div class="btn-group Q" role="group" aria-label="Basic mixed styles example"&#62;
+    &#60;button type="button" class="btn btn-danger"&#62;Left&#60;/button&#62;
+    &#60;button type="button" class="btn btn-warning"&#62;Middle&#60;/button&#62;
+    &#60;button type="button" class="btn btn-success"&#62;Right&#60;/button&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Estilos de contorno</h3>
+
+                    <br>
+
+                    <div class="btn-group Q" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary">Left</button>
+                        <button type="button" class="btn btn-outline-primary">Middle</button>
+                        <button type="button" class="btn btn-outline-primary">Right</button>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code9">&#60;div class="btn-group Q" role="group" aria-label="Basic outlined example"&#62;
+    &#60;button type="button" class="btn btn-outline-primary"&#62;Left&#60;/button&#62;
+    &#60;button type="button" class="btn btn-outline-primary"&#62;Middle&#60;/button&#62;
+    &#60;button type="button" class="btn btn-outline-primary"&#62;Right&#60;/button&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code9" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Grupos de casillas de verificación</h3>
+
+                    <br>
+
+                    <div class="btn-group Q" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code10">&#60;div class="btn-group Q" role="group" aria-label="Basic checkbox toggle button group"&#62;
+    &#60;input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"&#62;
+    &#60;label class="btn btn-outline-primary" for="btncheck1"&#62;Checkbox 1&#60;/label&#62;
+
+    &#60;input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off"&#62;
+    &#60;label class="btn btn-outline-primary" for="btncheck2"&#62;Checkbox 2&#60;/label&#62;
+
+    &#60;input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"&#62;
+    &#60;label class="btn btn-outline-primary" for="btncheck3"&#62;Checkbox 3&#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code10" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Botones de opción</h3>
+
+                    <br>
+
+                    <div class="btn-group Q" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code11">&#60;div class="btn-group Q" role="group" aria-label="Basic radio toggle button group"&#62;
+    &#60;input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked&#62;
+    &#60;label class="btn btn-outline-primary" for="btnradio1"&#62;Radio 1&#60;/label&#62;
+
+    &#60;input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"&#62;
+    &#60;label class="btn btn-outline-primary" for="btnradio2"&#62;Radio 2&#60;/label&#62;
+
+    &#60;input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"&#62;
+    &#60;label class="btn btn-outline-primary" for="btnradio3"&#62;Radio 3&#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code11" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Barra de botones</h3>
+
+                    <br>
+
+                    <div class="btn-toolbar Q" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group me-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-primary">1</button>
+                            <button type="button" class="btn btn-primary">2</button>
+                            <button type="button" class="btn btn-primary">3</button>
+                            <button type="button" class="btn btn-primary">4</button>
+                        </div>
+                        <div class="btn-group me-2" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-secondary">5</button>
+                            <button type="button" class="btn btn-secondary">6</button>
+                            <button type="button" class="btn btn-secondary">7</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Third group">
+                            <button type="button" class="btn btn-info">8</button>
+                        </div>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code12">&#60;div class="btn-toolbar Q" role="toolbar" aria-label="Toolbar with button groups"&#62;
+    &#60;div class="btn-group me-2" role="group" aria-label="First group"&#62;
+        &#60;button type="button" class="btn btn-primary"&#62;1&#60;/button&#62;
+        &#60;button type="button" class="btn btn-primary"&#62;2&#60;/button&#62;
+        &#60;button type="button" class="btn btn-primary"&#62;3&#60;/button&#62;
+        &#60;button type="button" class="btn btn-primary"&#62;4&#60;/button&#62;
+    &#60;/div&#62;
+
+    &#60;div class="btn-group me-2" role="group" aria-label="Second group"&#62;
+        &#60;button type="button" class="btn btn-secondary"&#62;5&#60;/button&#62;
+        &#60;button type="button" class="btn btn-secondary"&#62;6&#60;/button&#62;
+        &#60;button type="button" class="btn btn-secondary"&#62;7&#60;/button&#62;
+    &#60;/div&#62;
+
+    &#60;div class="btn-group me-2" role="group" aria-label="Third group"&#62;
+        &#60;button type="button" class="btn btn-info"&#62;8&#60;/button&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code12" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Anidado</h3>
+
+                    <br>
+
+                    <div class="btn-group Q" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-primary">1</button>
+                        <button type="button" class="btn btn-primary">2</button>
+
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code13">&#60;div class="btn-group Q" role="group" aria-label="Button group with nested dropdown"&#62;
+    &#60;button type="button" class="btn btn-primary"&#62;1&#60;/button&#62;
+    &#60;button type="button" class="btn btn-primary"&#62;2&#60;/button&#62;
+
+    &#60;div class="btn-group" role="group"&#62;
+        &#60;button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" 
+        data-bs-toggle="dropdown" aria-expanded="false"&#62;
+        Dropdown
+        &#60;/button&#62;
+        &#60;ul class="dropdown-menu" aria-labelledby="btnGroupDrop1"&#62;
+            &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Dropdown link&#60;/a&#62;&#60;/li&#62;
+            &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Dropdown link&#60;/a&#62;&#60;/li&#62;
+        &#60;/ul&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code13" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tamaños</h3>
+
+                    <p class="Q interlineado">
+                        En lugar de aplicar clases de tamaño de botón a cada botón de un grupo, simplemente agregue
+                        <b>.btn-group-* (lg o sm)</b>.
+                    </p><br>
+
+                    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+                    <div class="btn-group btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code14">&#60;div class="btn-group btn-group-lg" role="group" aria-label="Basic example"&#62;...&#60;/div&#62;
+&#60;div class="btn-group btn-group" role="group" aria-label="Basic example"&#62;...&#60;/div&#62;
+&#60;div class="btn-group btn-group-sm" role="group" aria-label="Basic example"&#62;...&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code14" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Variación vertical</h3>
+
+                    <p class="Q interlineado">
+                        Puede utilizar la clase <b>btn-group-vertical</b>, para que un conjunto de botones aparezca
+                        apilado verticalmente en lugar de horizontalmente.
+                    </p><br>
+
+                    <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Button</button>
+                        <button type="button" class="btn btn-primary">Button</button>
+                        <button type="button" class="btn btn-primary">Button</button>
+                    </div>
+
+                    <div class="btn-group-vertical" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                    </div>
+
+                    <div class="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+                    </div>
+
+                    <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-primary">1</button>
+                        <button type="button" class="btn btn-primary">2</button>
+
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code15">&#60;div class="btn-group-vertical"&#62;
+    ...
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code15" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="check">Botones de chequeo</h1><br>
+
+                    <h3 class="Q" id="group">Ejemplo básico</h3>
+
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Checked checkbox
+                        </label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code16">&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"&#62;
+    &#60;label class="form-check-label" for="flexCheckDefault"&#62;
+        Default checkbox
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked&#62;
+    &#60;label class="form-check-label" for="flexCheckChecked"&#62;
+        Checked checkbox
+    &#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code16" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Inactivos</h3>
+
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        <label class="form-check-label" for="flexCheckDisabled">
+                            Disabled checkbox
+                        </label>
+                    </div>
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                            Disabled checked checkbox
+                        </label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code17">&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" value="" 
+        id="flexCheckDisabled" disabled&#62;
+    &#60;label class="form-check-label" for="flexCheckDisabled"&#62;
+        Disabled checkbox
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" value="" 
+        id="flexCheckCheckedDisabled" checked disabled&#62;
+    &#60;label class="form-check-label" for="flexCheckDisabled"&#62;
+        Disabled checked checkbox
+    &#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code17" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="radio">Radios</h1><br>
+
+                    <h3 class="Q" id="group">Ejemplo básico</h3>
+
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Default radio
+                        </label>
+                    </div>
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Default checked radio
+                        </label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code18">&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"&#62;
+    &#60;label class="form-check-label" for="flexRadioDefault1"&#62;
+        Default radio
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+        checked&#62;
+    &#60;label class="form-check-label" for="flexRadioDefault2"&#62;
+        Default checked radio
+    &#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code18" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Inactivos</h3>
+
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled"
+                            disabled>
+                        <label class="form-check-label" for="flexRadioDisabled">
+                            Disabled radio
+                        </label>
+                    </div>
+                    <div class="form-check Q">
+                        <input class="form-check-input" type="radio" name="flexRadioDisabled"
+                            id="flexRadioCheckedDisabled" checked disabled>
+                        <label class="form-check-label" for="flexRadioCheckedDisabled">
+                            Disabled checked radio
+                        </label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code19">&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled"
+        disabled&#62;
+    &#60;label class="form-check-label" for="flexRadioDisabled"&#62;
+        Disabled radio
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check Q"&#62;
+    &#60;input class="form-check-input" type="radio" name="flexRadioDisabled"
+        id="flexRadioCheckedDisabled" checked disabled&#62;
+    &#60;label class="form-check-label" for="flexRadioCheckedDisabled"&#62;
+        Disabled checked radio
+    &#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code19" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="switch">Switch</h1><br>
+
+                    <h3 class="Q" id="group">Ejemplo básico</h3>
+
+                    <div class="form-check form-switch Q">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox
+                            input</label>
+                    </div>
+                    <div class="form-check form-switch Q">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox
+                            input</label>
+                    </div>
+                    <div class="form-check form-switch Q">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"
+                            disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox
+                            input</label>
+                    </div>
+                    <div class="form-check form-switch Q">
+                        <input class="form-check-input" type="checkbox" role="switch"
+                            id="flexSwitchCheckCheckedDisabled" checked disabled>
+                        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch
+                            checkbox input</label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code20">&#60;div class="form-check form-switch Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"&#62;
+    &#60;label class="form-check-label" for="flexSwitchCheckDefault"&#62;
+        Default switch checkbox input
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check form-switch Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+        checked&#62;
+    &#60;label class="form-check-label" for="flexSwitchCheckChecked"&#62;
+        Checked switch checkbox input
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check form-switch Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"
+        disabled&#62;
+    &#60;label class="form-check-label" for="flexSwitchCheckDisabled"&#62;
+        Disabled switch checkbox input
+    &#60;/label&#62;
+&#60;/div&#62;
+&#60;div class="form-check form-switch Q"&#62;
+    &#60;input class="form-check-input" type="checkbox" role="switch"
+        id="flexSwitchCheckCheckedDisabled" checked disabled&#62;
+    &#60;label class="form-check-label" for="flexSwitchCheckCheckedDisabled"&#62;
+        Disabled checked switch checkbox input
+    &#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code20" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">En línea</h3>
+
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.form-check-inline</b> en cualquier <b>.form-check</b>,
+                        para que los conjuntos de botones aparezca en la misma fila horizontalmente.
+                    </p><br>
+
+                    <div class="form-check form-check-inline Q">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline Q">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline Q">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div>
+
+                    <div class="form-check form-check-inline Q">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline Q">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline Q">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                    </div>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code21">&#60;div class="form-check form-check-inline Q"&#62;
+...
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code21" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group-vertical btn-flotante">
+            <a href="#" class="btn btn-primary Q">Buttons</a>
+            <a href="#group" class="btn btn-primary Q">Group</a>
+            <a href="#check" class="btn btn-primary Q">Checks</a>
+            <a href="#radio" class="btn btn-primary Q">Radios</a>
+            <a href="#switch" class="btn btn-primary Q">Switches</a>
+        </div>
+
+    <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

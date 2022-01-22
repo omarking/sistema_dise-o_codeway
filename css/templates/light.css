@@ -1,0 +1,8 @@
+.tema::after {
+    content: "Tema Claro";
+}
+
+.nav-dash {
+    background-color: #004AAD;
+}
+

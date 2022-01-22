@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Listas</h1>
+
+                    <br>
+
+                    <p class="Q interlineado">
+                        Las listas son un componente que ayuda a mostrar información en grupos, por lo general en forma ordenada.
+                    </p><br>
+
+                    <h3 class="Q">Ejemplo básico</h3><br>
+
+                    <div class="content-muestra">
+                        <ul class="list-group">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                        </ul>
+                    </div>
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;ul class="list-group Q"&#62;
+    &#60;li class="list-group-item"&#62;An item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A second&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A third item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A fourth item&#60;/li&#62;
+&#60;/ul&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Elementos activos</h3><br>
+
+                    <p class="Q interlineado">
+                        Agregue <b>.active</b> al <b>.list-group-item</b> para activar el elemento.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <ul class="list-group Q">
+                            <li class="list-group-item active">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;ul class="list-group Q"&#62;
+    &#60;li class="list-group-item active"&#62;An item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A second&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A third item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A fourth item&#60;/li&#62;
+&#60;/ul&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Elementos inactivos</h3><br>
+
+                    <p class="Q interlineado">
+                        Agregue <b>.disabled</b> al <b>.list-group-item</b> para que los elementos de la lista parezcan
+                        deshabilitados.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <ul class="list-group Q">
+                            <li class="list-group-item disabled" aria-disabled="true">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;ul class="list-group Q"&#62;
+    &#60;li class="list-group-item disabled" aria-disabled="true"&#62;An item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A second&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A third item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A fourth item&#60;/li&#62;
+&#60;/ul&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Enlaces y botones</h3><br>
+
+                    <p class="Q interlineado">
+                        Puede usar <b>&#60;a&#62;</b> o <b>&#60;button&#62;</b> para crear elementos de listas
+                        accionables con estados flotantes, <br>
+                        desactivados y activos agregando <b>.list-group-item-action</b>.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <ul class="list-group Q">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                The current link item
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                            <button type="button" class="list-group-item list-group-item-action active"
+                                aria-current="true">
+                                The current button
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">A second item</button>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;ul class="list-group Q"&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action active" aria-current="true"&#62;
+        The current link item
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action"&#62;
+        A second link item
+    &#60;/a&#62;
+    &#60;button type="button" class="list-group-item list-group-item-action active" aria-current="true"&#62;
+        The current button
+    &#60;/button&#62;
+    &#60;button type="button" class="list-group-item list-group-item-action"&#62;
+        A second item
+    &#60;/button&#62;
+&#60;/ul&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Flush</h3><br>
+
+                    <p class="Q interlineado">
+                        Agregue la clase <b>.list-group-flush</b> para eliminar algunos bordes y esquinas.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <ul class="list-group list-group-flush Q">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">A fourth item</li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;ul class="list-group list-group-flush Q"&#62;
+    &#60;li class="list-group-item"&#62;An item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A second&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A third item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A fourth item&#60;/li&#62;
+&#60;/ul&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Numerado</h3><br>
+
+                    <p class="Q interlineado">
+                        Agregue la clase <b>.list-group-nudered</b> (Opcionalmente, use un elemento <b>&#60;ol&#62;</b>)
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <ol class="list-group list-group-numbered Q">
+                            <li class="list-group-item">A list item</li>
+                            <li class="list-group-item">A list item</li>
+                            <li class="list-group-item">A list item</li>
+                        </ol>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;ol class="list-group list-group-numbered Q"&#62;
+    &#60;li class="list-group-item"&#62;A list item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A list item&#60;/li&#62;
+    &#60;li class="list-group-item"&#62;A list item&#60;/li&#62;
+&#60;/ol&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Clases contextuales</h3><br>
+
+                    <p class="Q interlineado">
+                        Utilice clases contextuales para diseñar los elementos de las listas con un fondo y color con
+                        estado.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <ul class="list-group Q">
+                            <li class="list-group-item">A simple default</li>
+                            <li class="list-group-item list-group-item-primary">A simple primary</li>
+                            <li class="list-group-item list-group-item-secondary">A simple secondary</li>
+                            <li class="list-group-item list-group-item-success">A simple success</li>
+                            <li class="list-group-item list-group-item-danger">A simple danger</li>
+                            <li class="list-group-item list-group-item-warning">A simple warning</li>
+                            <li class="list-group-item list-group-item-info">A simple info</li>
+                            <li class="list-group-item list-group-item-light">A simple light</li>
+                            <li class="list-group-item list-group-item-dark">A simple dark</li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;ul class="list-group Q"&#62;
+    &#60;li class="list-group-item"&#62;A simple default&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-primary"&#62;A simple primary&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-secondary"&#62;A simple secondary&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-success"&#62;A simple success&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-danger"&#62;A simple danger&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-warning"&#62;A simple warning&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-info"&#62;A simple info&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-light"&#62;A simple light&#60;/li&#62;
+    &#60;li class="list-group-item list-group-item-dark"&#62;A simple dark&#60;/li&#62;
+&#60;/ul&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-muestra">
+                        <div class="list-group Q">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                A simple default
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">
+                                A simple primary
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                                A simple secondary
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-success">
+                                A simple success
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger">
+                                A simple danger
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">
+                                A simple warning
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-info">
+                                A simple info
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-light">
+                                A simple light
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+                                A simple dark
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code8">&#60;div class="list-group Q"&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action"&#62;
+        A simple default
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-primary"&#62;
+        A simple primary
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-secondary"&#62;
+        A simple secondary
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-success"&#62;
+        A simple success
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-danger"&#62;
+        A simple danger
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-warning"&#62;
+        A simple warning
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-info"&#62;
+    A simple info
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-light"&#62;
+        A simple light
+    &#60;/a&#62;
+    &#60;a href="#" class="list-group-item list-group-item-action list-group-item-dark"&#62;
+        A simple dark
+    &#60;/a&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplos de combinaciones</h3><br>
+
+                    <div class="content-muestra Q">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                A list item
+                                <span class="badge bg-primary rounded-pill">14</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                A second list item
+                                <span class="badge bg-primary rounded-pill">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                A third list item
+                                <span class="badge bg-primary rounded-pill">1</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="content-muestra Q">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small>3 days ago</small>
+                                </div>
+                                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                <small>And some small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                <small class="text-muted">And some muted small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">List group item heading</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                <small class="text-muted">And some muted small print.</small>
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-muestra Q">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                First checkbox
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Second checkbox
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Third checkbox
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Fourth checkbox
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Fifth checkbox
+                            </li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+    <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

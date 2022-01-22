@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Progress Bars</h1><br>
+
+                    <p class="Q interlineado">
+                        <ul>
+                            <li>Debe usar la clase <b>.progress</b> como envoltorio para indicar el valor máximo de la
+                                barra de progreso.</li>
+                            <li>Usamos la clase <b>.progress-bar</b> para indicar el progreso hasta ahora.</li>
+                            <li>Puede modificar los estilos de la clase <b>.progress-bar</b> con CSS.</li>
+                            <li>Tambien puede modificar el progreso con la clase <b>w-*</b> (0, 25, 50, 75, 100)</li>
+                            <li>El Progress Bar requiere algunos atributos de role y aria para que sea accesible.</li>
+                        </ul>
+
+                    </p><br>
+
+                    <div class="content-muestra Q">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar w-75" role="progressbar" style="width: 75%" aria-valuenow="75"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+        aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="25"
+        aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="50"
+        aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="75"
+        aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar" role="progressbar" style="width: 100%"  aria-valuenow="100" aria-valuemin="100"
+        aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Etiquetas</h3>
+
+                    <p class="Q interlineado">
+                        Agregue etiquetas a sus barras de progreso colocando texto dentro de la barra de progreso.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="progress Q">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">25%</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+    aria-valuemin="0" aria-valuemax="100"&#62;25%&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Altura</h3>
+
+                    <p class="Q interlineado">
+                        Solo establecemos un valor de altura en el .progress especificando un estilo CSS
+                        <b>style="height: 5px;"</b>.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="progress Q" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress Q" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;div class="progress Q" style="height: 5px;"&#62;
+    &#60;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+    aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q" style="height: 20px;"&#62;
+    &#60;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+    aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Backgrounds</h3>
+
+                    <p class="Q interlineado">
+                        Utilice clases <b>bg-*</b> para cambiar la apariencia de las barras de progreso individuales.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="progress Q">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress Q">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress Q">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress Q">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
+                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
+        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Multi barras</h3>
+
+                    <p class="Q interlineado">
+                        Puede incluir varias barras de progreso en un componente de progreso si lo necesita.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="progress Q">
+                            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+    &#60;div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+    &#60;div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Striped (a rayas)</h3>
+
+                    <p class="Q interlineado">
+                        Puede incluir la clase <b>.progress-bar-striped</b> a una <b>.progress-bar</b> para obtener la
+                        apariencia con rayas.
+                        <br>
+                        Siéntase libre de combinar las clases.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar"
+                                style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+                                style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" 
+    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&#62;&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Rayas animadas</h3>
+
+                    <p class="Q interlineado">
+                        Puede incluir la clase <b>.progress-bar-animated</b> a una clase <b>.progress-bar</b> que
+                        contenga la clase <b>.progress-bar-striped</b> para obtener la
+                        apariencia con rayas.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;div class="progress Q"&#62;
+    &#60;div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"&#62;&#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="loader">Loader</h1><br>
+
+                    <p class="Q interlineado">
+                        Utilice los border spinner para un indicador de carga ligero.
+                    </p>
+
+                    <div class="content-muestra Q">
+                        <div class="spinner-border Q" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code8">&#60;div class="spinner-border Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Colores</h3>
+
+                    <p class="Q interlineado">
+                        Puede utilizar la clase <b>.text-*</b> con el color contextual de texto para cambiar la
+                        apariencia.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-secondary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-warning" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-info" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-light" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-dark" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code9">&#60;div class="spinner-border text-primary Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-secondary Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-success Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-danger Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-warning Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-info Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-light Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border text-dark Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code9" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Growing spinner</h3>
+
+                    <p class="Q interlineado">
+                        Puede utilizar la clase <b>.spinner-grow</b> para cambiar la apariencia del elemento de carga.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="spinner-grow" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code10">&#60;div class="spinner-grow Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code10" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Colores</h3>
+
+                    <p class="Q interlineado">
+                        Puede cambiar el color contextual del elemento con las clases <b>.text-*</b>.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-secondary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-warning" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-info" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-light" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-dark" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code11">&#60;div class="spinner-grow text-primary Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-secondary Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-success Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-danger Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-warning Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-info Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-light Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow text-dark Q" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code11" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tamaños</h3>
+
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.spinner-border-sm</b> o <b>.spinner-grow-sm</b> para cambiar el tamaño.
+                        <br>
+                        Tambien puede cambiar el tamaño desde css <b>style="width: 3rem; height: 3rem;"</b>.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="spinner-border spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow spinner-grow-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code12">&#60;div class="spinner-border spinner-border-sm" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow spinner-grow-sm" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;
+&#60;div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code12" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplos en botones</h3>
+
+                    <br>
+
+                    <div class="content-muestra">
+                        <button class="btn btn-primary Q" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="visually-hidden">Loading...</span>
+                        </button>
+                        <button class="btn btn-primary Q" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                        <button class="btn btn-primary Q" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            <span class="visually-hidden">Loading...</span>
+                        </button>
+                        <button class="btn btn-primary Q" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code13">&#60;button class="btn btn-primary Q" type="button" disabled&#62;
+    &#60;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&#62;&#60;/span&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/button&#62;
+&#60;button class="btn btn-primary" type="button Q" disabled&#62;
+    &#60;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&#62;&#60;/span&#62;
+    Loading...
+&#60;/button&#62;
+&#60;button class="btn btn-primary Q" type="button" disabled&#62;
+    &#60;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&#62;&#60;/span&#62;
+    &#60;span class="visually-hidden"&#62;Loading...&#60;/span&#62;
+&#60;/button&#62;
+&#60;button class="btn btn-primary" type="button Q" disabled&#62;
+    &#60;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&#62;&#60;/span&#62;
+    Loading...
+&#60;/button&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code13" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+        <div class="btn-group-vertical btn-flotante">
+            <a href="#" class="btn btn-primary Q">Progress</a>
+            <a href="#loader" class="btn btn-primary Q">Loader</a>
+        </div>
+
+    <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

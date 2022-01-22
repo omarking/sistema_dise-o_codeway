@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Formularios</h1><br>
+
+                    <h3 class="Q">Entradas de texto o Inputs</h3><br>
+                    <p class="Q interlineado">
+                        Las entradas de texto también llamados inputs, son componentes que ayudan a agregar campos en
+                        los formularios.
+                        <br>
+                        Estos se pueden utilizar únicamente con texto o acompañarlo con un icono al inicio o al final.
+                        <br>
+                        Puede utilizar las clases de bordes contextuales <b>.border-*</b> para cambiar el color del
+                        input.
+                        <h5 class="Q">Ejemplo:</h5>
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <form class="form-floating Q">
+                            <input type="email" class="form-control border-primary" id="floatingInputValue"
+                                placeholder="name@example.com" value="test@example.com">
+                            <label for="floatingInputValue">Input with value</label>
+                        </form>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;form class="form-floating Q"&#62;
+    &#60;input type="email" class="form-control border-primary" id="floatingInputValue" placeholder="name@example.com"
+        value="test@example.com"&#62;
+    &#60;label for="floatingInputValue"&#62;Input with value&#60;/label&#62;
+&#60;/form&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Estado desactivo</h3><br>
+                    <p class="Q interlineado">
+                        Puede agregar dentro del input la propiedad <b>disabled</b> para desactivar el elemento.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <form class="form-floating Q">
+                            <input type="email" class="form-control border-primary" id="floatingInputValue"
+                                placeholder="name@example.com" value="test@example.com" disabled>
+                            <label for="floatingInputValue">Input with value</label>
+                        </form>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;form class="form-floating Q"&#62;
+    &#60;input type="email" class="form-control border-primary" id="floatingInputValue" placeholder="name@example.com"
+        value="test@example.com" disabled&#62;
+    &#60;label for="floatingInputValue"&#62;Input with value&#60;/label&#62;
+&#60;/form&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Input error</h3><br>
+                    <p class="Q interlineado">
+                        Puede agregar dentro del input la propiedad <b>disabled</b> para desactivar el elemento.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <form class="form-floating Q">
+                            <input type="email" class="form-control is-invalid" id="floatingInputInvalid"
+                                placeholder="name@example.com" value="test@example.com">
+                            <label for="floatingInputInvalid">Invalid input</label>
+                        </form>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;form class="form-floating Q"&#62;
+    &#60;input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com"
+        value="test@example.com"&#62;
+    &#60;label for="floatingInputInvalid"&#62;Invalid input&#60;/label&#62;
+&#60;/form&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Área de texto</h3><br>
+                    <p class="Q interlineado">
+                        En estos componentes puede colocar una mayor cantidad de texto.
+                        <br>
+                        Sirven para la parte de comentarios en los formularios entre otras funciones.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="form-floating Q">
+                            <textarea class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Comentarios</label>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;div class="form-floating Q"&#62;
+    &#60;textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"&#62;&#60;/textarea&#62;
+    &#60;label for="floatingTextarea"&#62;Comentarios&#60;/label&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Selección multiple</h3><br>
+                    <p class="Q interlineado">
+                        Permite seleccionar varios elementos de una lista.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <select class="form-select Q" aria-label="Default select example">
+                            <option selected>Abrir opciones</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;select class="form-select Q" aria-label="Default select example"&#62;
+    &#60;option selected&#62;Abrir opciones&#60;/option&#62;
+    &#60;option value="1"&#62;One&#60;/option&#62;
+    &#60;option value="2"&#62;Two&#60;/option&#62;
+    &#60;option value="3"&#62;Three&#60;/option&#62;
+&#60;/select&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Dropdowns</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento despliega una lista de opciones elegibles.
+                        <br>
+                        Al ser un boton o un elemento a, puede cambiar su apariencia con las mismas clases que usan los
+                        botones.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="dropdown Q">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown button
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+
+                        <br>
+
+                        <div class="dropdown Q">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;!--Dropdown con boton--&#62;
+&#60;div class="dropdown Q"&#62;
+    &#60;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false"&#62;
+        Dropdown button
+    &#60;/button&#62;
+    &#60;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"&#62;
+        &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Action&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Another action&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Something else here&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/div&#62;
+
+&#60;!--Dropdown con link--&#62;
+&#60;div class="dropdown Q"&#62;
+    &#60;a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false"&#62;
+        Dropdown link
+    &#60;/a&#62;
+
+    &#60;ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"&#62;
+        &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Action&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Another action&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a class="dropdown-item" href="#"&#62;Something else here&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Carga de archivos</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento puede buscar localmente archivos.
+                        <br>
+                        Puede agregar el atributo <b>multiple</b>, para definir una entrada multiple.
+                        <br>
+                        Si lo desea personalizar, puede colocar clases de botones.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="mb-3 Q">
+                            <label for="formFile" class="form-label">Carga de archivo simple</label>
+                            <input class="form-control btn-primary" type="file" id="formFile">
+                        </div>
+                        <div class="mb-3 Q">
+                            <label for="formFileMultiple" class="form-label">Carga multiple de archivos</label>
+                            <input class="form-control btn-secondary" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="mb-3 Q">
+                            <label for="formFileDisabled" class="form-label">Carga desactivada</label>
+                            <input class="form-control btn-success" type="file" id="formFileDisabled" disabled>
+                        </div>
+                        <div class="mb-3 Q">
+                            <label for="formFileSm" class="form-label">Ejemplo pequeño</label>
+                            <input class="form-control btn-danger form-control-sm" id="formFileSm" type="file">
+                        </div>
+                        <div class="Q">
+                            <label for="formFileLg" class="form-label">Ejemplo largo</label>
+                            <input class="form-control btn-dark form-control-lg" id="formFileLg" type="file">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;div class="mb-3 Q"&#62;
+    &#60;label for="formFile" class="form-label"&#62;Default file input example&#60;/label&#62;
+    &#60;input class="form-control" type="file" id="formFile"&#62;
+&#60;/div&#62;
+&#60;div class="mb-3 Q"&#62;
+    &#60;label for="formFileMultiple" class="form-label"&#62;Multiple files input example&#60;/label&#62;
+    &#60;input class="form-control" type="file" id="formFileMultiple" multiple&#62;
+&#60;/div&#62;
+&#60;div class="mb-3 Q"&#62;
+    &#60;label for="formFileDisabled" class="form-label"&#62;Disabled file input example&#60;/label&#62;
+    &#60;input class="form-control" type="file" id="formFileDisabled" disabled&#62;
+&#60;/div&#62;
+&#60;div class="mb-3 Q"&#62;
+    &#60;label for="formFileSm" class="form-label"&#62;Small file input example&#60;/label&#62;
+    &#60;input class="form-control form-control-sm" id="formFileSm" type="file"&#62;
+&#60;/div&#62;
+&#60;div class="Q"&#62;
+    &#60;label for="formFileLg" class="form-label"&#62;Large file input example&#60;/label&#62;
+    &#60;input class="form-control form-control-lg" id="formFileLg" type="file"&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Carga de archivos con Previsualizador simple</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento permite subir un documento o imagen y previsualizarla al cargarse, siempre y
+                        cuando sea simple y ligero.
+                        <br>
+                        Puede modificar la estructura y diseño del documento en el codigo JS.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <input id="fileSimple" class="form-control btn-primary" type="file" />
+                        <hr>
+                        <div id="previewSimple" style="width:50%;"></div>
+                    </div>
+
+                    <script>
+                        document.getElementById("fileSimple").onchange = function (e) {
+                            // Creamos el objeto de la clase FileReader
+                            let reader = new FileReader();
+
+                            // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+                            reader.readAsDataURL(e.target.files[0]);
+
+                            // Cuando el archivo este cargado se ejecutara el siguiente código
+                            reader.onload = function () {
+                                let preview = document.getElementById('previewSimple'),
+                                    doc = document.createElement('embed');
+
+                                //Propiedades elemento cargado (doc)
+                                doc.width = '100%';
+                                doc.src = reader.result;
+
+                                //Propiedades elemento contenedor del archivo 
+                                preview.className = 'img-thumbnail';
+                                preview.innerHTML = '';
+                                preview.append(doc);
+                            };
+                        }
+                    </script>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codearchivos">&#60;!--Estructura HTML--&#62;
+&#60;input id="fileSimple" class="form-control btn-primary" type="file"/&#62;
+    &#60;hr&#62;
+&#60;div id="previewSimple" style="width:50%;"&#62;&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codearchivos" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codeJS">&#60;!--Previsualizador JS--&#62;
+&#60;script&#62;
+    document.getElementById("fileSimple").onchange = function (e) {
+        // Creamos el objeto de la clase FileReader
+        let reader = new FileReader();
+
+        // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+        reader.readAsDataURL(e.target.files[0]);
+
+        // Cuando el archivo este cargado se ejecutara el siguiente código
+        reader.onload = function () {
+            let preview = document.getElementById('previewSimple'),
+                doc = document.createElement('embed');
+
+            //Propiedades elemento cargado (doc)
+            doc.width = '100%';
+            doc.src = reader.result;
+
+            //Propiedades elemento contenedor del archivo 
+            preview.className = 'img-thumbnail';
+            preview.innerHTML = '';
+            preview.append(doc);
+        };
+    }
+&#60;/script&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codeJS" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Carga de archivos complejo</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento permite cargar imagenes con su nombre y extension.
+                        <br>
+                        Solo admite una imagen a la vez.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="cnt-pre">
+                            <figure class="image-container">
+                                <img id="chosen-image">
+                                <figcaption id="file-name" class="fc"></figcaption>
+                            </figure>
+
+                            <input type="file" id="upload-button" accept="image/*" class="in">
+                            <label for="upload-button" class="lb btn-primary">
+                                <ion-icon name="cloud-upload-outline" size="large"></ion-icon>
+                                <br>
+                                Elegir imagen
+                            </label>
+                        </div>
+
+                        <script>
+                            let uploadButton = document.getElementById("upload-button");
+                            let chosenImage = document.getElementById("chosen-image");
+                            let fileName = document.getElementById("file-name");
+
+                            uploadButton.onchange = () => {
+                                let reader = new FileReader();
+                                reader.readAsDataURL(uploadButton.files[0]);
+                                reader.onload = () => {
+                                    chosenImage.setAttribute("src", reader.result);
+                                }
+                                fileName.textContent = uploadButton.files[0].name;
+                            }
+                        </script>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codecomplejo">&#60;!--Estructura HTML--&#62;
+&#60;div class="cnt-pre"&#62;
+    &#60;figure class="image-container"&#62;
+        &#60;img id="chosen-image"&#62;
+        &#60;figcaption id="file-name" class="fc"&#62;&#60;/figcaption&#62;
+    &#60;/figure&#62;
+
+    &#60;input type="file" id="upload-button" accept="image/*" class="in"&#62;
+    &#60;label for="upload-button" class="lb btn-primary"&#62;
+        &#60;ion-icon name="cloud-upload-outline" size="large"&#62;&#60;/ion-icon&#62;
+        &#60;br&#62;
+        Elegir imagen
+    &#60;/label&#62;
+&#60;/div&#62;
+</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codecomplejo" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codecomplejoJS">&#60;!--Codigo JS--&#62;
+&#60;script&#62;&#62;
+    let uploadButton = document.getElementById("upload-button");
+    let chosenImage = document.getElementById("chosen-image");
+    let fileName = document.getElementById("file-name");
+
+    uploadButton.onchange = () =&#62; {
+        let reader = new FileReader();
+        reader.readAsDataURL(uploadButton.files[0]);
+        reader.onload = () =&#62; {
+            chosenImage.setAttribute("src", reader.result);
+        }
+        fileName.textContent = uploadButton.files[0].name;
+    }
+&#60;/script&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codecomplejoJS" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Carga de archivos complejo y multiple</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento permite cargar imagenes con su nombre y extension.
+                        <br>
+                        Permite agregar varias imagenes a la vez.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="cnt-mul">
+                            <input type="file" id="file-input" class="in-mul" accept="image/png, image/jpeg"
+                                onchange="preview()" multiple>
+                            <label for="file-input" class="lb-mul btn-secondary">
+                                <ion-icon name="cloud-upload-outline" size="large"></ion-icon>
+                                <br>
+                                Elegir imagen
+                            </label>
+                            <p id="num-of-files" class="p-mul"></p>
+                            <div id="images-mul"></div>
+                        </div>
+
+                        <script>
+                            let fileInput = document.getElementById("file-input");
+                            let imageContainer = document.getElementById("images-mul");
+                            let numOfFiles = document.getElementById("num-of-files");
+
+                            function preview() {
+                                imageContainer.innerHTML = "";
+                                numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+
+                                for (i of fileInput.files) {
+                                    let reader = new FileReader();
+                                    let figure = document.createElement("figure");
+                                    figure.className = "figure-mul";
+                                    let figCap = document.createElement("figcaption");
+                                    figCap.className = "figcaption-mul";
+                                    figCap.innerText = i.name;
+                                    figure.appendChild(figCap);
+                                    reader.onload = () => {
+                                        let img = document.createElement("img");
+                                        img.className = "img-mul";
+                                        img.setAttribute("src", reader.result);
+                                        figure.insertBefore(img, figCap);
+                                    }
+                                    imageContainer.appendChild(figure);
+                                    reader.readAsDataURL(i);
+                                }
+                            }
+                        </script>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codemultimg">&#60;!--Estructura HTML--&#62;
+&#60;div class="cnt-mul"&#62;
+    &#60;input type="file" id="file-input" class="in-mul" accept="image/png, image/jpeg" onchange="preview()" multiple&#62;
+    &#60;label for="file-input" class="lb-mul btn-secondary"&#62;
+        &#60;ion-icon name="cloud-upload-outline" size="large"&#62;&#60;/ion-icon&#62;
+        &#60;br&#62;
+        Elegir imagen
+    &#60;/label&#62;
+    &#60;p id="num-of-files" class="p-mul"&#62;&#60;/p&#62;
+    &#60;div id="images-mul"&#62;&#60;/div&#62;
+&#60;/div&#62;
+</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codemultimg" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codemultimgJS">&#60;!--Codigo JS--&#62;
+&#60;script&#62;
+let fileInput = document.getElementById("file-input");
+let imageContainer = document.getElementById("images-mul");
+let numOfFiles = document.getElementById("num-of-files");
+
+function preview() {
+    imageContainer.innerHTML = "";
+    numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+
+    for (i of fileInput.files) {
+        let reader = new FileReader();
+        let figure = document.createElement("figure");
+        figure.className = "figure-mul";
+        let figCap = document.createElement("figcaption");
+        figCap.className = "figcaption-mul";
+        figCap.innerText = i.name;
+        figure.appendChild(figCap);
+        reader.onload = () =&#62; {
+            let img = document.createElement("img");
+            img.className = "img-mul";
+            img.setAttribute("src", reader.result);
+            figure.insertBefore(img, figCap);
+        }
+        imageContainer.appendChild(figure);
+        reader.readAsDataURL(i);
+    }
+}
+&#60;/script&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codemultimgJS" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Carga de archivo (PDF y IMG)</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento permite cargar archivos con previsualizador mas avanzado (solo admite uno a la
+                        vez).
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="cnt-pdf-pre">
+                            <form class="shadow-lg p-3 mb-5 bg-body rounded form-control">
+                                <input type="file" name="pdffFile" id="pdffFile" class="form-control btn-primary"
+                                    required>
+                                <embed class="emd" id="vistaPrevia" type="application/pdf" width="500" height="500">
+                                <br>
+                                <button class="btn btn-primary">Subir Archivo</button>
+                            </form>
+                        </div>
+
+                        <script>
+                            document.querySelector('#pdffFile').addEventListener('change', () => {
+
+                                let pdffFile = document.querySelector('#pdffFile').files[0];
+                                let pdffFileURL = URL.createObjectURL(pdffFile) + "#toolbar=0";
+
+                                document.querySelector('#vistaPrevia').setAttribute('src', pdffFileURL);
+                            })
+                        </script>
+                    </div>
+
+                    <br>
+
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre">
+<code id="codeCarga">&#60;!--Estructura HTML--&#62;
+&#60;div class="cnt-pdf-pre"&#62;
+    &#60;form class="shadow-lg p-3 mb-5 bg-body rounded form-control"&#62;
+        &#60;input type="file" name="pdffFile" id="pdffFile" class="form-control btn-primary" required&#62;
+        &#60;embed class="emd" id="vistaPrevia" type="application/pdf" width="500" height="500"&#62;
+        &#60;br&#62;
+        &#60;button class="btn btn-primary"&#62;Subir Archivo&#60;/button&#62;
+    &#60;/form&#62;
+&#60;/div&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codeCarga" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre">
+<code id="codeCarga2">&#60;!--Codigo JS--&#62;
+&#60;script&#62;
+    document.querySelector('#pdffFile').addEventListener('change', () =&#62; {
+
+        let pdffFile = document.querySelector('#pdffFile').files[0];
+        let pdffFileURL = URL.createObjectURL(pdffFile) + "#toolbar=0";
+
+        document.querySelector('#vistaPrevia').setAttribute('src', pdffFileURL);
+    })
+&#60;/script&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codeCarga2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">DropZone</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento permite cargar archivos, arrastrando y soltando.
+                        <br>
+                        Para este ejemplo utilizamos una libreria llamada <b><a href="https://docs.dropzone.dev"
+                                target="_blank">Dropzone.JS</a></b>,
+                        es necesario referenciar la siguiente CDN, estructura y codigo.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+                        <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
+                            type="text/css" />
+
+                        <form action="/target" class="dropzone shadow-lg p-3 mb-5 bg-body rounded border-primary"
+                            id="my-great-dropzone"></form>
+
+                        <script>
+                            Dropzone.options.myGreatDropzone = {
+                                paramName: "file", // Nombre del archivo
+                                maxFilesize: 2, // Tamaño maxiomo en MB
+                                accept: function (file, done) {
+                                    if (file.name == ".jpg") {
+                                        done("Accept");
+                                    } else {
+                                        done();
+                                    }
+                                }
+                            };
+                        </script>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE
+                            class="Q pre"><code id="codedropcdn">&#60;!--CDN Libreria--&#62;
+&#60;script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"&#62;&#60;/script&#62;
+&#60;link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" /&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codedropcdn" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codedropzone">&#60;!--Estructura HTML--&#62;
+&#60;form action="/target" class="dropzone shadow-lg p-3 mb-5 bg-body rounded border-primary"
+    id="my-great-dropzone"&#62;
+&#60;/form&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codedropzone" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre"><code id="codedropzoneJS">&#60;!--Codigo JS--&#62;
+&#60;script&#62;
+    Dropzone.options.myGreatDropzone = {
+        paramName: "file", // Nombre del archivo
+        maxFilesize: 2, // Tamaño maxiomo en MB
+        accept: function (file, done) {
+            if (file.name == ".jpg") {
+                done("Accept");
+            } else {
+                done();
+            }
+        }
+    };
+&#60;/script&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#codedropzoneJS" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Color picker</h3><br>
+                    <p class="Q interlineado">
+                        Este elemento permite seleccionar colores.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <label for="exampleColorInput" class="form-label Q">Color picker</label>
+                        <input type="color" class="form-control form-control-color Q" id="exampleColorInput"
+                            value="#004AAD" title="Choose your color">
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre">
+<code id="code7">&#60;label for="exampleColorInput" class="form-label Q"&#62;Color picker&#60;/label&#62;
+&#60;input type="color" class="form-control form-control-color Q" id="exampleColorInput" value="#004AAD" title="Choose your color"&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplo complejo</h3><br>
+                    <p class="Q interlineado">
+                        Este ejemplo requiere de un script para cambiar de formar al validar.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <form class="row g-3 needs-validation Q" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Please choose a username.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom03" class="form-label">City</label>
+                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="validationCustom04" class="form-label">State</label>
+                                <select class="form-select" id="validationCustom04" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>...</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="validationCustom05" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Agree to terms and conditions
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </div>
+                        </form>
+
+                        <script>
+                            // Ejemplo de JavaScript de inicio para deshabilitar el envío de formularios si hay campos no válidos
+                            (function () {
+                                'use strict'
+
+                                // Obtener todos los formularios a los que queremos aplicar estilos de validación personalizados
+                                var forms = document.querySelectorAll('.needs-validation')
+
+                                // Ciclo de busqueda
+                                Array.prototype.slice.call(forms)
+                                    .forEach(function (form) {
+                                        form.addEventListener('submit', function (event) {
+                                            if (!form.checkValidity()) {
+                                                event.preventDefault()
+                                                event.stopPropagation()
+                                            }
+
+                                            form.classList.add('was-validated')
+                                        }, false)
+                                    })
+                            })()
+                        </script>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre">
+<code id="code8">&#60;!--Estructura--&#62;
+&#60;form class="row g-3 needs-validation Q" novalidate&#62;
+    &#60;div class="col-md-4"&#62;
+        &#60;label for="validationCustom01" class="form-label"&#62;First name&#60;/label&#62;
+        &#60;input type="text" class="form-control" id="validationCustom01" value="Mark" required&#62;
+        &#60;div class="valid-feedback"&#62;
+            Looks good!
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-md-4"&#62;
+        &#60;label for="validationCustom02" class="form-label"&#62;Last name&#60;/label&#62;
+        &#60;input type="text" class="form-control" id="validationCustom02" value="Otto" required&#62;
+        &#60;div class="valid-feedback"&#62;
+            Looks good!
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-md-4"&#62;
+        &#60;label for="validationCustomUsername" class="form-label"&#62;Username&#60;/label&#62;
+        &#60;div class="input-group has-validation"&#62;
+            &#60;span class="input-group-text" id="inputGroupPrepend"&#62;@&#60;/span&#62;
+            &#60;input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                required&#62;
+            &#60;div class="invalid-feedback"&#62;
+                Please choose a username.
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-md-6"&#62;
+        &#60;label for="validationCustom03" class="form-label"&#62;City&#60;/label&#62;
+        &#60;input type="text" class="form-control" id="validationCustom03" required&#62;
+        &#60;div class="invalid-feedback"&#62;
+            Please provide a valid city.
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-md-3"&#62;
+        &#60;label for="validationCustom04" class="form-label"&#62;State&#60;/label&#62;
+        &#60;select class="form-select" id="validationCustom04" required&#62;
+            &#60;option selected disabled value=""&#62;Choose...&#60;/option&#62;
+            &#60;option&#62;...&#60;/option&#62;
+        &#60;/select&#62;
+        &#60;div class="invalid-feedback"&#62;
+            Please select a valid state.
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-md-3"&#62;
+        &#60;label for="validationCustom05" class="form-label"&#62;Zip&#60;/label&#62;
+        &#60;input type="text" class="form-control" id="validationCustom05" required&#62;
+        &#60;div class="invalid-feedback"&#62;
+            Please provide a valid zip.
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-12"&#62;
+        &#60;div class="form-check"&#62;
+            &#60;input class="form-check-input" type="checkbox" value="" id="invalidCheck" required&#62;
+            &#60;label class="form-check-label" for="invalidCheck"&#62;
+                Agree to terms and conditions
+            &#60;/label&#62;
+            &#60;div class="invalid-feedback"&#62;
+                You must agree before submitting.
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col-12"&#62;
+        &#60;button class="btn btn-primary" type="submit"&#62;Submit form&#60;/button&#62;
+    &#60;/div&#62;
+&#60;/form&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <div class="content-codigo">
+
+                        <PRE class="Q pre">
+<code id="code8">&#60;!--Script--&#62;
+&#60;script&#62;
+    // Ejemplo de JavaScript de inicio para deshabilitar el envío de formularios si hay campos no válidos
+    (function () {
+        'use strict'
+
+        // Obtener todos los formularios a los que queremos aplicar estilos de validación personalizados
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Ciclo de busqueda
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+&#60;/script&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+                            <script src="../js/dashboard.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Tables</h1><br>
+
+                    <h4 class="Q">Ejemplo simple</h4><br>
+
+                    <div class="content-muestra">
+                        <table class="table Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;table class="table Q"&#62;
+    &#60;thead&#62;
+        &#60;tr class="L-bold"&#62;
+            &#60;th scope="col"&#62;#&#60;/th&#62;
+            &#60;th scope="col"&#62;First&#60;/th&#62;
+            &#60;th scope="col"&#62;Last&#60;/th&#62;
+            &#60;th scope="col"&#62;Handle&#60;/th&#62;
+        &#60;/tr&#62;
+    &#60;/thead&#62;
+    &#60;tbody&#62;
+        &#60;tr&#62;
+            &#60;th scope="row"&#62;1&#60;/th&#62;
+            &#60;td&#62;Mark&#60;/td&#62;
+            &#60;td&#62;Otto&#60;/td&#62;
+            &#60;td&#62;@mdo&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr&#62;
+            &#60;th scope="row"&#62;2&#60;/th&#62;
+            &#60;td&#62;Jacob&#60;/td&#62;
+            &#60;td&#62;Thornton&#60;/td&#62;
+            &#60;td&#62;@fat&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr&#62;
+            &#60;th scope="row"&#62;3&#60;/th&#62;
+            &#60;td colspan="2"&#62;Larry the Bird&#60;/td&#62;
+            &#60;td&#62;@twitter&#60;/td&#62;
+        &#60;/tr&#62;
+    &#60;/tbody&#62;
+&#60;/table&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Variantes</h3><br>
+                    <p class="Q interlineado">
+                        Puede utilizar clases contextuales para colorear tablas, filas de tablas o celdas individuales.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <table class="table Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Heading</th>
+                                    <th scope="col">Heading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table">
+                                    <td class="Q-bold">Default</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-primary">
+                                    <td class="Q-bold">Primary</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-secondary">
+                                    <td class="Q-bold">Secondary</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td class="Q-bold">Success</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td class="Q-bold">Danger</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td class="Q-bold">Warning</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-info">
+                                    <td class="Q-bold">Info</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="Q-bold">Light</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr class="table-dark text-light">
+                                    <td class="Q-bold">Dark</th>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;!-- On tables --&#62;
+&#60;table class="table-primary"&#62;...&#60;/table&#62;
+&#60;table class="table-secondary"&#62;...&#60;/table&#62;
+&#60;table class="table-success"&#62;...&#60;/table&#62;
+&#60;table class="table-danger"&#62;...&#60;/table&#62;
+&#60;table class="table-warning"&#62;...&#60;/table&#62;
+&#60;table class="table-info"&#62;...&#60;/table&#62;
+&#60;table class="table-light"&#62;...&#60;/table&#62;
+&#60;table class="table-dark"&#62;...&#60;/table&#62;
+
+&#60;!-- On rows --&#62;
+&#60;tr class="table-primary"&#62;...&#60;/tr&#62;
+&#60;tr class="table-secondary"&#62;...&#60;/tr&#62;
+&#60;tr class="table-success"&#62;...&#60;/tr&#62;
+&#60;tr class="table-danger"&#62;...&#60;/tr&#62;
+&#60;tr class="table-warning"&#62;...&#60;/tr&#62;
+&#60;tr class="table-info"&#62;...&#60;/tr&#62;
+&#60;tr class="table-light"&#62;...&#60;/tr&#62;
+&#60;tr class="table-dark"&#62;...&#60;/tr&#62;
+
+&#60;!-- On cells (`td` or `th`) --&#62;
+&#60;tr&#62;
+    &#60;td class="table-primary"&#62;...&#60;/td&#62;
+    &#60;td class="table-secondary"&#62;...&#60;/td&#62;
+    &#60;td class="table-success"&#62;...&#60;/td&#62;
+    &#60;td class="table-danger"&#62;...&#60;/td&#62;
+    &#60;td class="table-warning"&#62;...&#60;/td&#62;
+    &#60;td class="table-info"&#62;...&#60;/td&#62;
+    &#60;td class="table-light"&#62;...&#60;/td&#62;
+    &#60;td class="table-dark"&#62;...&#60;/td&#62;
+&#60;/tr&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tablas rayadas</h3><br>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.table-striped</b> para tener una apariencia rayada dentro de los
+                        elementos con la clase <b>.table</b>.
+                        <br>
+                        Puede hacer combinaciones de las clases y obtener la apariencia que necesite.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <table class="table table-striped Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-dark table-striped Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;!--Ejemplo simple--&#62;
+&#60;table class="table table-striped"&#62;
+    ...
+&#60;/table&#62;
+
+&#60;!--Ejemplo con color--&#62;
+&#60;table class="table table-dark table-striped"&#62;
+    ...
+&#60;/table&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Filas flotantes</h3><br>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.table-hover</b> para habilitar un estado de desplazamiento en las
+                        filas.
+                        <br>
+                        Puede hacer combinaciones de las clases y obtener la apariencia que necesite.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <table class="table table-hover Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-dark table-hover Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;!--Ejemplo simple--&#62;
+&#60;table class="table table-hover"&#62;
+    ...
+&#60;/table&#62;
+
+&#60;!--Ejemplo con color--&#62;
+&#60;table class="table table-dark table-hover"&#62;
+    ...
+&#60;/table&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tablas con bordes</h3><br>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.table-bordered</b> para habilitar los bordes en la tabla y con las
+                        clases contextuales
+                        <b>.border-*</b> podra colorear la tabla.
+                        <br>
+                        Puede hacer combinaciones de las clases y obtener la apariencia que necesite.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <table class="table table-bordered Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered border-dark Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;!--Ejemplo simple--&#62;
+&#60;table class="table table-bordered"&#62;
+    ...
+&#60;/table&#62;
+
+&#60;!--Ejemplo con color--&#62;
+&#60;table class="table table-bordered border-dark"&#62;
+    ...
+&#60;/table&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tablas sin bordes</h3><br>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.table-borderless</b> para eliminar todos los bordes en la tabla.
+                        <br>
+                        Puede hacer combinaciones de las clases y obtener la apariencia que necesite.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <table class="table table-borderless Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-dark table-borderless Q">
+                            <thead>
+                                <tr class="L-bold">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;!--Ejemplo simple--&#62;
+&#60;table class="table table-borderless"&#62;
+    ...
+&#60;/table&#62;
+
+&#60;!--Ejemplo con color--&#62;
+&#60;table class="table table-dark table-borderless"&#62;
+    ...
+&#60;/table&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="filter">Filter</h1><br>
+
+                    <p class="Q interlineado">
+                        Escriba algo en el campo de entrada para buscar en la tabla nombres, apellidos o correos
+                        electrónicos:
+                        <br>
+                        Tenga en cuenta que comenzamos la búsqueda en tbody, para evitar filtrar los encabezados de la
+                        tabla.
+                        <br>
+                        Para este ejemplo es necesario importar el cdn de JQuery para hacer el filtro.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                        <script>
+                            $(document).ready(function () {
+                                $("#myInput").on("keyup", function () {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function () {
+                                        $(this).toggle($(this).text().toLowerCase().indexOf(
+                                            value) > -1)
+                                    });
+                                });
+                            });
+                        </script>
+                        <input class="form-control Q" id="myInput" type="text" placeholder="Search..">
+                        <table class="table table-bordered table-striped Q">
+                            <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTable">
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@mail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@greatstuff.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Anja</td>
+                                    <td>Ravendale</td>
+                                    <td>a_r@test.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;!--Estructura del filtro--&#62;
+&#60;input class="form-control Q" id="myInput" type="text" placeholder="Search.."&#62;
+&#60;table class="table table-bordered table-striped Q"&#62;
+    &#60;thead&#62;
+        &#60;tr&#62;
+            &#60;th&#62;Firstname&#60;/th&#62;
+            &#60;th&#62;Lastname&#60;/th&#62;
+            &#60;th&#62;Email&#60;/th&#62;
+        &#60;/tr&#62;
+    &#60;/thead&#62;
+    &#60;tbody id="myTable"&#62;
+        &#60;tr&#62;
+            &#60;td&#62;John&#60;/td&#62;
+            &#60;td&#62;Doe&#60;/td&#62;
+            &#60;td&#62;john@example.com&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr&#62;
+            &#60;td&#62;Mary&#60;/td&#62;
+            &#60;td&#62;Moe&#60;/td&#62;
+            &#60;td&#62;mary@mail.com&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr&#62;
+            &#60;td&#62;July&#60;/td&#62;
+            &#60;td&#62;Dooley&#60;/td&#62;
+            &#60;td&#62;july@greatstuff.com&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr&#62;
+            &#60;td&#62;Anja&#60;/td&#62;
+            &#60;td&#62;Ravendale&#60;/td&#62;
+            &#60;td&#62;a_r@test.com&#60;/td&#62;
+        &#60;/tr&#62;
+    &#60;/tbody&#62;
+&#60;/table&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code8">&#60;!--Script para filtrar--&#62;
+&#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&#62;&#60;/script&#62;
+&#60;script&#62;
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(
+                    value) &#62; -1)
+            });
+        });
+    });
+&#60;/script&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="pagination">Pagination</h1><br>
+
+                    <h3 class="Q">Ejemplo simple</h3><br>
+
+                    <div class="content-muestra">
+                        <nav aria-label="Page navigation example" class="Q">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code9">&#60;!--Ejemplo simple--&#62;
+&#60;nav aria-label="Page navigation example" class="Q"&#62;
+    &#60;ul class="pagination"&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;Previous&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;1&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;2&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;3&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;Next&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code9" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplo con icono</h3><br>
+
+                    <div class="content-muestra">
+                        <nav aria-label="Page navigation example" class="Q">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code10">&#60;!--Ejemplo con icono--&#62;
+&#60;nav aria-label="Page navigation example" class="Q"&#62;
+    &#60;ul class="pagination"&#62;
+        &#60;li class="page-item"&#62;
+            &#60;a class="page-link" href="#" aria-label="Previous"&#62;
+                &#60;span aria-hidden="true"&#62;&laquo;&#60;/span&#62;
+            &#60;/a&#62;
+        &#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;1&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;2&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;3&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;
+            &#60;a class="page-link" href="#" aria-label="Next"&#62;
+                &#60;span aria-hidden="true"&#62;&raquo;&#60;/span&#62;
+            &#60;/a&#62;
+        &#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code10" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Estados desactivados y activos</h3><br>
+
+                    <p class="Q interlineado">
+                        Puede utilizar las clases <b>.disabled</b> o <b>.active</b> segun requiera.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <nav aria-label="..." class="Q">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code11">&#60;!--Ejemplo con estados--&#62;
+&#60;nav aria-label="..." class="Q"&#62;
+    &#60;ul class="pagination"&#62;
+        &#60;li class="page-item disabled"&#62;
+            &#60;a class="page-link"&#62;Previous&#60;/a&#62;
+        &#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;1&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item active" aria-current="page"&#62;
+            &#60;a class="page-link" href="#"&#62;2&#60;/a&#62;
+        &#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;3&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;
+            &#60;a class="page-link" href="#"&#62;Next&#60;/a&#62;
+        &#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code11" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Tamaños</h3><br>
+
+                    <p class="Q interlineado">
+                        Puede utilizar las clases <b>.pagination-lg</b> o <b>.pagination-sm</b> segun requiera, para
+                        cambiar el tamaño.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <!--Tamaño largo-->
+                        <nav aria-label="..." class="Q">
+                            <ul class="pagination pagination-lg">
+                                <li class="page-item active" aria-current="page">
+                                    <span class="page-link">1</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            </ul>
+                        </nav>
+
+                        <!--Tamaño pequeño-->
+                        <nav aria-label="..." class="Q">
+                            <ul class="pagination pagination-sm">
+                                <li class="page-item active" aria-current="page">
+                                    <span class="page-link">1</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code12">&#60;!--Tamaño largo--&#62;
+&#60;nav aria-label="..." class="Q"&#62;
+    &#60;ul class="pagination pagination-lg"&#62;
+        &#60;li class="page-item active" aria-current="page"&#62;
+            &#60;span class="page-link"&#62;1&#60;/span&#62;
+        &#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;2&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;3&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;
+
+&#60;!--Tamaño pequeño--&#62;
+&#60;nav aria-label="..." class="Q"&#62;
+    &#60;ul class="pagination pagination-sm"&#62;
+        &#60;li class="page-item active" aria-current="page"&#62;
+            &#60;span class="page-link"&#62;1&#60;/span&#62;
+        &#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;2&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="page-item"&#62;&#60;a class="page-link" href="#"&#62;3&#60;/a&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+&#60;/nav&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code12" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="breadcrumb">Breadcrumb</h1><br>
+
+                    <h3 class="Q">Ejemplos simples</h3><br>
+
+                    <p class="Q interlineado">
+                        Utilice una lista ordenada o desordenada con elementos de lista vinculados para crear una ruta
+                        de navegación con un estilo mínimo.
+                        <br>
+                        Utilice nuestras utilidades para agregar estilos adicionales como desee.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <nav aria-label="breadcrumb" class="Q">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            </ol>
+                        </nav>
+
+                        <nav aria-label="breadcrumb" class="Q">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                        </nav>
+
+                        <nav aria-label="breadcrumb" class="Q">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code13">&#60;!--Ejemplos simples--&#62;
+&#60;nav aria-label="breadcrumb" class="Q"&#62;
+    &#60;ol class="breadcrumb"&#62;
+        &#60;li class="breadcrumb-item active" aria-current="page"&#62;Home&#60;/li&#62;
+    &#60;/ol&#62;
+&#60;/nav&#62;
+
+&#60;nav aria-label="breadcrumb" class="Q"&#62;
+    &#60;ol class="breadcrumb"&#62;
+        &#60;li class="breadcrumb-item"&#62;&#60;a href="#"&#62;Home&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="breadcrumb-item active" aria-current="page"&#62;Library&#60;/li&#62;
+    &#60;/ol&#62;
+&#60;/nav&#62;
+
+&#60;nav aria-label="breadcrumb" class="Q"&#62;
+    &#60;ol class="breadcrumb"&#62;
+        &#60;li class="breadcrumb-item"&#62;&#60;a href="#"&#62;Home&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="breadcrumb-item"&#62;&#60;a href="#"&#62;Library&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="breadcrumb-item active" aria-current="page"&#62;Data&#60;/li&#62;
+    &#60;/ol&#62;
+&#60;/nav&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code13" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplos con divisores</h3><br>
+
+                    <div class="content-muestra">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="Q">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code13">&#60;!--Ejemplo con divisores--&#62;
+&#60;nav style="--bs-breadcrumb-divider: '&#62;';" aria-label="breadcrumb" class="Q"&#62;
+    &#60;ol class="breadcrumb"&#62;
+        &#60;li class="breadcrumb-item"&#62;&#60;a href="#"&#62;Home&#60;/a&#62;&#60;/li&#62;
+        &#60;li class="breadcrumb-item active" aria-current="page"&#62;Library&#60;/li&#62;
+    &#60;/ol&#62;
+&#60;/nav&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code13" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div><br>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="btn-group-vertical btn-flotante">
+            <a href="#" class="btn btn-primary Q">Tables</a>
+            <a href="#filter" class="btn btn-primary Q">Filter</a>
+            <a href="#pagination" class="btn btn-primary Q">Pagination</a>
+            <a href="#breadcrumb" class="btn btn-primary Q">Breadcrumb</a>
+        </div>
+
+    <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

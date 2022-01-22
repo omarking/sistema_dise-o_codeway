@@ -1,0 +1,72 @@
+/*  ----------------   Fuentes   ----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/*Cambios en toda la pagina*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+}
+
+/*Implementacion de la tipografia Laila*/
+.L {
+    font-family: 'Laila', sans-serif;
+}
+
+.L-bold {
+    font-family: 'Laila', sans-serif;
+    font-weight: bold;
+}
+
+.L-italic {
+    font-family: 'Laila', sans-serif;
+    font-style: italic;
+}
+
+/*Implementacion de la tipografia Quicksands*/
+.Q {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.Q-bold {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.Q-italic {
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+}
+
+/*  ----------------------   Titulos  ----------------------- */
+
+/*  Light */
+
+.colorUno {
+    color: #0a7aa6;
+}
+
+.colorDos {
+    color: #0fbfae;
+}
+
+.colorTres {
+    color: #f2eb8d;
+}
+
+.colorCuatro {
+    color: #f28d77;
+}
+
+.colorCinco{
+    color: #004aad;
+}
+
+.colorSeis{
+    color: #2463b8;
+}
+
+.colorSiete{
+    color: #019be3;
+}

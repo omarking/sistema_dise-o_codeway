@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Modales</h1><br>
+
+
+                    <p class="Q interlineado">
+                        Este componente se usa para mostrar que tan avanzado esta en un proceso.
+                    </p><br>
+
+                    <h4 class="Q">Componentes del Modal</h4>
+                    <p class="Q interlineado">
+                        El modal, puede contar con un <b>header</b>, <b>body</b> y <b>footer</b>.
+                        Sientase libre de personalizarlo y agregar tantos elementos como necesite.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title L-bold">Modal title (Header)</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Modal body text goes here. (Body)</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <p>(Footer)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;div class="modal-dialog"&#62;
+    &#60;div class="modal-content"&#62;
+        &#60;div class="modal-header"&#62;
+            &#60;h5 class="modal-title L-bold"&#62;Modal title (Header)&#60;/h5&#62;
+            &#60;button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"&#62;&#60;/button&#62;
+        &#60;/div&#62;
+        &#60;div class="modal-body"&#62;
+            &#60;p&#62;Modal body text goes here. (Body)&#60;/p&#62;
+        &#60;/div&#62;
+        &#60;div class="modal-footer"&#62;
+            &#60;button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal"&#62;Close&#60;/button&#62;
+            &#60;button type="button" class="btn btn-primary"&#62;Save changes&#60;/button&#62;
+            &#60;p&#62;(Footer)&#60;/p&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+
+                    <h4 class="Q">Ejemplo de lanzador modal</h4>
+                    <p class="Q interlineado">
+                        En este caso creamos un boton que sirva como disparador para mostral el modal.
+                        <br>
+                        Dentro del boton se debe especificar el modal con el atributo
+                        <b>data-bs-target="#idModalReferenciado"</b>
+                        <br>
+                        Finalmente dentro del contenedor principal del modal colocaremos el id que referenciamos en el
+                        boton.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Mostrar modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade Q" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;!-- Button trigger modal --&#62;
+&#60;button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+    data-bs-target="#exampleModal"&#62;
+    Mostrar modal
+&#60;/button&#62;
+
+&#60;!-- Modal --&#62;
+&#60;div class="modal fade Q" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true"&#62;
+    &#60;div class="modal-dialog"&#62;
+        &#60;div class="modal-content"&#62;
+            &#60;div class="modal-header"&#62;
+                &#60;h5 class="modal-title L-bold" id="exampleModalLabel"&#62;Modal title&#60;/h5&#62;
+                &#60;button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"&#62;&#60;/button&#62;
+            &#60;/div&#62;
+            &#60;div class="modal-body"&#62;
+                ...
+            &#60;/div&#62;
+            &#60;div class="modal-footer"&#62;
+                &#60;button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal"&#62;Close&#60;/button&#62;
+                &#60;button type="button" class="btn btn-primary"&#62;Save changes&#60;/button&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Modal backdrop</h4>
+                    <p class="Q interlineado">
+                        Este tipo de modal no puede cerrar haciendo clic fuera de él, es necesario tocar el boton de
+                        cerrar.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Mostrar modal backdrop
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade Q" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="staticBackdropLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;!-- Button trigger modal --&#62;
+&#60;button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"&#62;
+    Mostrar modal backdrop
+&#60;/button&#62;
+
+&#60;!-- Modal --&#62;
+&#60;div class="modal fade Q" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"&#62;
+    &#60;div class="modal-dialog"&#62;
+        &#60;div class="modal-content"&#62;
+            &#60;div class="modal-header"&#62;
+                &#60;h5 class="modal-title L-bold" id="staticBackdropLabel"&#62;Modal title&#60;/h5&#62;
+                    &#60;button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"&#62;&#60;/button&#62;
+            &#60;/div&#62;
+            &#60;div class="modal-body"&#62;
+                ...
+            &#60;/div&#62;
+            &#60;div class="modal-footer"&#62;
+                &#60;button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal"&#62;Close&#60;/button&#62;
+                &#60;button type="button" class="btn btn-primary"&#62;Understood&#60;/button&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Modal scrollable</h4>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.modal-dialog-scrollable</b> a elementos <b>.modal-dialog</b> que
+                        tengan demasiado
+                        contenido, para obtener una barra de desplazamiento.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleScrollable">
+                            Mostrar modal scrollable
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleScrollable" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            This is some placeholder content to show the scrolling behavior for modals.
+                                            We use repeated line breaks to demonstrate how content can exceed minimum
+                                            inner height, thereby showing inner scrolling. When content becomes longer
+                                            than the predefined max-height of modal, content will be cropped and
+                                            scrollable within the modal.
+                                        </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;!-- Scrollable modal --&#62;
+&#60;div class="modal-dialog modal-dialog-scrollable"&#62;
+    ...
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Modal centrado</h4>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.modal-dialog-centered</b> a cualquier <b>.modal-dialog</b>
+                        para mostrar el modal al centro de la pantalla.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+                            data-bs-target="#exampleCentrado">
+                            Mostrar modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade Q" id="exampleCentrado" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;!-- Modal centrado --&#62;
+&#60;div class="modal-dialog modal-dialog-centered"&#62;
+    ...
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Modal centrado</h4>
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.modal-dialog-centered</b> a cualquier <b>.modal-dialog</b>
+                        para mostrar el modal al centro de la pantalla.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <div class="modal fade Q" id="exampleModalToggle" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalToggleLabel">Modal 1</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Show a second modal and hide this one with the button below.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Mostrar segundo modal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalToggleLabel2">Modal 2</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Hide this modal and show the first with the button below.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal">Volver al primero</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle"
+                            role="button">Mostrar primer modal</a>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;!-- Doble modal --&#62;
+&#60;div class="modal fade Q" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1"&#62;
+    &#60;div class="modal-dialog modal-dialog-centered"&#62;
+        &#60;div class="modal-content"&#62;
+            &#60;div class="modal-header"&#62;
+                &#60;h5 class="modal-title L-bold" id="exampleModalToggleLabel"&#62;Modal 1&#60;/h5&#62;
+                &#60;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&#62;&#60;/button&#62;
+            &#60;/div&#62;
+            &#60;div class="modal-body"&#62;
+                Show a second modal and hide this one with the button below.
+            &#60;/div&#62;
+            &#60;div class="modal-footer"&#62;
+                &#60;button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"&#62;Mostrar
+                    segundo modal&#60;/button&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1"&#62;
+    &#60;div class="modal-dialog modal-dialog-centered"&#62;
+        &#60;div class="modal-content"&#62;
+            &#60;div class="modal-header"&#62;
+                &#60;h5 class="modal-title L-bold" id="exampleModalToggleLabel2"&#62;Modal 2&#60;/h5&#62;
+                &#60;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&#62;&#60;/button&#62;
+            &#60;/div&#62;
+            &#60;div class="modal-body"&#62;
+                Hide this modal and show the first with the button below.
+            &#60;/div&#62;
+            &#60;div class="modal-footer"&#62;
+                &#60;button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"&#62;Volver al
+                    primero&#60;/button&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+&#60;a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button"&#62;Mostrar primer modal&#60;/a&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Tamaños de Modales</h4>
+                    <p class="Q interlineado">
+                        Puede agregar alguna de las siguientes clases, para modificar el tamaño de los modales.
+                        <ul>
+                            <li><b>.modal-xl</b> (Extra largo)</li>
+                            <li><b>.modal-lg</b> (Largo)</li>
+                            <li><b>.modal-sm</b> (Pequeño)</li>
+                        </ul>
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+                            data-bs-target="#exampleUno">
+                            Mostrar modal xl
+                        </button>
+                        <button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+                            data-bs-target="#exampleDos">
+                            Mostrar modal lg
+                        </button>
+                        <button type="button" class="btn btn-primary Q" data-bs-toggle="modal"
+                            data-bs-target="#exampleTres">
+                            Mostrar modal sm
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade Q" id="exampleUno" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade Q" id="exampleDos" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content modal-lg">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade Q" id="exampleTres" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title L-bold" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;!-- Tamaños --&#62;
+&#60;div class="modal-dialog modal-xl"&#62;
+    ...
+&#60;/div&#62;
+&#60;div class="modal-dialog modal-lg"&#62;
+    ...
+&#60;/div&#62;
+&#60;div class="modal-dialog modal-sm"&#62;
+    ...
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="alert">Alerts</h1><br>
+
+                    <h4 class="Q">Ejemplos simples</h4>
+
+                    <div class="content-muestra">
+
+                        <div class="alert alert-primary Q" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary Q" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success Q" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger Q" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning Q" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info Q" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light Q" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark Q" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;!-- Alertas contextuales --&#62;
+&#60;div class="alert alert-primary Q" role="alert"&#62;
+    A simple primary alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-secondary Q" role="alert"&#62;
+    A simple secondary alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-success Q" role="alert"&#62;
+    A simple success alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-danger Q" role="alert"&#62;
+    A simple danger alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-warning Q" role="alert"&#62;
+    A simple warning alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-info Q" role="alert"&#62;
+    A simple info alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-light Q" role="alert"&#62;
+    A simple light alert—check it out!
+&#60;/div&#62;
+&#60;div class="alert alert-dark Q" role="alert"&#62;
+    A simple dark alert—check it out!
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Alertas con iconos</h4>
+                    <p class="Q interlineado">
+                        En este caso puede omitir el uso del svg y sustituirlo por iconos de IONIC.
+                    </p><br>
+
+                    <div class="content-muestra">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </symbol>
+                            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </symbol>
+                            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </symbol>
+                        </svg>
+
+                        <div class="alert alert-primary d-flex align-items-center Q" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+                                <use xlink:href="#info-fill" /></svg>
+                            <div>
+                                An example alert with an icon
+                            </div>
+                        </div>
+                        <div class="alert alert-success d-flex align-items-center Q" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                <use xlink:href="#check-circle-fill" /></svg>
+                            <div>
+                                An example success alert with an icon
+                            </div>
+                        </div>
+                        <div class="alert alert-warning d-flex align-items-center Q" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                                <use xlink:href="#exclamation-triangle-fill" /></svg>
+                            <div>
+                                An example warning alert with an icon
+                            </div>
+                        </div>
+                        <div class="alert alert-danger d-flex align-items-center Q" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                                <use xlink:href="#exclamation-triangle-fill" /></svg>
+                            <div>
+                                An example danger alert with an icon
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code8">&#60;!-- Alertas con iconos --&#62;
+&#60;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&#62;
+  &#60;symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16"&#62;
+    &#60;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&#62;
+  &#60;/symbol&#62;
+  &#60;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&#62;
+    &#60;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&#62;
+  &#60;/symbol&#62;
+  &#60;symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"&#62;
+    &#60;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&#62;
+  &#60;/symbol&#62;
+&#60;/svg&#62;
+
+&#60;div class="alert alert-primary d-flex align-items-center Q" role="alert"&#62;
+  &#60;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"&#62;&#60;use xlink:href="#info-fill"/&#62;&#60;/svg&#62;
+  &#60;div&#62;
+    An example alert with an icon
+  &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="alert alert-success d-flex align-items-center Q" role="alert"&#62;
+  &#60;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"&#62;&#60;use xlink:href="#check-circle-fill"/&#62;&#60;/svg&#62;
+  &#60;div&#62;
+    An example success alert with an icon
+  &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="alert alert-warning d-flex align-items-center Q" role="alert"&#62;
+  &#60;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"&#62;&#60;use xlink:href="#exclamation-triangle-fill"/&#62;&#60;/svg&#62;
+  &#60;div&#62;
+    An example warning alert with an icon
+  &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="alert alert-danger d-flex align-items-center Q" role="alert"&#62;
+  &#60;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"&#62;&#60;use xlink:href="#exclamation-triangle-fill"/&#62;&#60;/svg&#62;
+  &#60;div&#62;
+    An example danger alert with an icon
+  &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Contenido adicional</h4>
+                    <p class="Q interlineado">
+                        Si necesita colocar mas contenido, puede colocar un elemento <b>hr</b> para separar y el
+                        elemento que necesite.
+                        <br>
+                        Si lo desea puede utilizar las clases <b>.alert-*</b> para utilizar un color contextual.
+                    </p><br>
+
+                    <div class="content-muestra">
+
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>Aww yeah, you successfully read this important alert message. This example text is going
+                                to run a bit longer so that you can see how spacing within an alert works with this kind
+                                of content.</p>
+                            <hr>
+                            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice
+                                and tidy.</p>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code9">&#60;!-- Contenido adicional --&#62;
+&#60;div class="alert alert-success" role="alert"&#62;
+  &#60;h4 class="alert-heading"&#62;Well done!&#60;/h4&#62;
+  &#60;p&#62;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&#60;/p&#62;
+  &#60;hr&#62;
+  &#60;p class="mb-0"&#62;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&#60;/p&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code9" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h4 class="Q">Ejemplo live</h4>
+                    <p class="Q interlineado">
+                        Este componente puede ser personalizado con las clases anteriores.
+                        <br>
+                        Es necesario colocar el codigo js justo despues de crearlo o en un archivo aparte.
+                    </p><br>
+
+                    <div class="content-muestra">
+
+                        <div id="liveAlertPlaceholder"></div>
+                        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+                        <script>
+                            var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                            var alertTrigger = document.getElementById('liveAlertBtn')
+
+                            function alert(message, type) {
+                                var wrapper = document.createElement('div')
+                                wrapper.innerHTML = '<div class="alert alert-' + type +
+                                    ' alert-dismissible" role="alert">' + message +
+                                    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+                                alertPlaceholder.append(wrapper)
+                            }
+
+                            if (alertTrigger) {
+                                alertTrigger.addEventListener('click', function () {
+                                    alert('Nice, you triggered this alert message!', 'success')
+                                })
+                            }
+                        </script>
+
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code10">&#60;div id="liveAlertPlaceholder"&#62;&#60;/div&#62;
+&#60;button type="button" class="btn btn-primary" id="liveAlertBtn"&#62;Show live alert&#60;/button&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code10" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <h4 class="Q">Script</h4>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code11">var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertTrigger = document.getElementById('liveAlertBtn')
+
+function alert(message, type) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '&#60;div class="alert alert-' + type + ' alert-dismissible" role="alert"&#62;' + message + '&#60;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&#62;&#60;/button&#62;&#60;/div&#62;'
+
+  alertPlaceholder.append(wrapper)
+}
+
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', function () {
+    alert('Nice, you triggered this alert message!', 'success')
+  })
+}</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code11" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group-vertical btn-flotante">
+            <a href="#" class="btn btn-primary Q">Modales</a>
+            <a href="#alert" class="btn btn-primary Q">Alerts</a>
+        </div>
+
+            <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

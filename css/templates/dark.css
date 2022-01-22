@@ -1,0 +1,98 @@
+	.tema::after {
+		content: "Tema Oscuro";
+		color: white;
+	}
+
+	body {
+		background-color: #53A1C0;
+		color: #fff;
+	}
+
+	.isologo {
+		color: white;
+	}
+
+	.titulo {
+		color: #fff;
+		transition: 3s;
+	}
+
+	.sidenav-dash {
+		height: 100%;
+		width: 280px;
+		/*width: 20%;*/
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+	}
+
+	.sidenav-dash {
+		background-color: #137DA7;
+	}
+
+	.sidenav-info {
+		background-color: #137DA7;
+	}
+
+	.list-l3 .active {
+		color: #fff;
+		background-color: #53A1C0;
+		text-decoration: none;
+		border-left: 8px solid #3B94B7;
+	}
+
+	.list-l3 .active:hover {
+		color: #fff;
+		background-color: #137DA7;
+		text-decoration: none;
+		border-left: 8px solid #2E8DB2;
+	}
+
+	.list-l3 li {
+		margin: 0px 0px 0px 0px;
+		padding: 8px 0px 0px 20px;
+		font-size: 16px;
+		color: #fff;
+		height: 43px;
+		background-color: #53A1C0;
+		border-left: 8px solid #53A1C0;
+	}
+
+	.list-l3 li:hover {
+		color: #fff;
+		background-color: #137DA7;
+		text-decoration: none;
+		border-left: 8px solid #2E8DB2;
+	}
+
+	.menu-icon {
+		background-color: #136180;
+	}
+
+	.icon-back {
+		transition: 5s;
+		color: #fff;
+	}
+
+	.icon-back:hover {
+		color: #fff;
+	}
+
+	.icon {
+		transition: 5s;
+		color: #fff;
+	}
+
+	.icon:hover {
+		color: #fff;
+	}
+
+	.texto-tipo {
+		color: #004aad;
+	}
+
+	.ignore{
+		color: #000;
+	}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Tipografia</h1><br>
+                    <h3 class="Q">Familias tipográficas</h3>
+
+                    <p class="Q interlineado">
+                        Las tipográficas oficiales de CODEWAY son traidas desde Google Fonts
+                        &nbsp;&nbsp;
+                        <a href="https://fonts.google.com/specimen/Laila" class="L-bold" target="_blank">Laila</a>
+                        &nbsp;&nbsp;
+                        <a href="https://fonts.google.com/specimen/Quicksand" class="Q-bold"
+                            target="_blank">Quicksand</a>
+                        <br>
+                        Puedes utilizar las siguientes variantes de cada tipográfias, referenciando de la siguiente
+                        forma.
+                    </p><br>
+
+                    <h6 class="Q-bold">Ejemplo:</h6><br>
+
+                    <div class="content-doble">
+                        <div class="elemento-doble">
+                            <h6 class="L">Titulo CODEWAY (Laila Regular)</h6>
+                            <h6 class="L-bold">Titulo CODEWAY (Laila Bold)</h6>
+                            <h6 class="L-italic">Titulo CODEWAY (Laila Italic)</h6>
+                            <br>
+                            <div class="content-codigo">
+                                <PRE class="Q pre">
+<code id="code1">&#60;h6 class="L"&#62;Titulo CODEWAY (Laila Regular)&#60;/h6&#62;
+&#60;h6 class="L-bold"&#62;Titulo CODEWAY (Laila Bold)&#60;/h6&#62;
+&#60;h6 class="L-italic"&#62;Titulo CODEWAY (Laila Italic)&#60;/h6&#62;</code></PRE>
+                                <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                                    data-clipboard-target="#code1" id="copy-button">
+                                    <ion-icon name="documents"></ion-icon>
+                                </button>
+                            </div><br>
+                        </div>
+                        <div class="elemento-doble">
+                            <h6 class="Q">Titulo CODEWAY (Quicksand Regular)</h6>
+                            <h6 class="Q-bold">Titulo CODEWAY (Quicksand Bold)</h6>
+                            <h6 class="Q-italic">Titulo CODEWAY (Quicksand Italic)</h6>
+                            <br>
+                            <div class="content-codigo">
+                                <PRE class="Q pre">
+<code id="code2">&#60;h6 class="Q"&#62;Titulo CODEWAY (Quicksand Regular)&#60;/h6&#62;
+&#60;h6 class="Q-bold"&#62;Titulo CODEWAY (Quicksand Bold)&#60;/h6&#62;
+&#60;h6 class="Q-italic"&#62;Titulo CODEWAY (Quicksand Italic)&#60;/h6&#62;</code></PRE>
+                                <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                                    data-clipboard-target="#code2" id="copy-button">
+                                    <ion-icon name="documents"></ion-icon>
+                                </button>
+                            </div><br>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h3 class="Q-bold">Heading</h3>
+                    <p class="Q interlineado">
+                        Se utiliza principalmente para títulos de alguna sección.
+                    </p><br>
+                    <h6 class="Q-bold">Ejemplo:</h6><br>
+
+                    <div class="content-doble">
+                        <div class="elemento-doble">
+                            <h1 class="L-bold">h1. Heading</h1>
+                            <h2 class="L-bold">h2. Heading</h2>
+                            <h3 class="L-bold">h3. Heading</h3>
+                            <h4 class="L-bold">h4. Heading</h4>
+                            <h5 class="L-bold">h5. Heading</h5>
+                            <h6 class="L-bold">h6. Heading</h6>
+                            <div class="content-codigo">
+                                <PRE class="Q pre">
+<code id="code3">&#60;h1 class="L-bold"&#62;h1. Heading&#60;/h1&#62;
+&#60;h2 class="L-bold"&#62;h2. Heading&#60;/h2&#62;
+&#60;h3 class="L-bold"&#62;h3. Heading&#60;/h3&#62;
+&#60;h4 class="L-bold"&#62;h4. Heading&#60;/h4&#62;
+&#60;h5 class="L-bold"&#62;h5. Heading&#60;/h5&#62;
+&#60;h6 class="L-bold"&#62;h6. Heading&#60;/h6&#62;</code></PRE>
+                                <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                                    data-clipboard-target="#code3" id="copy-button">
+                                    <ion-icon name="documents"></ion-icon>
+                                </button>
+                            </div><br>
+                        </div>
+                        <div class="elemento-doble texto-tipo">
+                            <h1 class="L-bold">h1. Heading</h1>
+                            <h2 class="L-bold">h2. Heading</h2>
+                            <h3 class="L-bold">h3. Heading</h3>
+                            <h4 class="L-bold">h4. Heading</h4>
+                            <h5 class="L-bold">h5. Heading</h5>
+                            <h6 class="L-bold">h6. Heading</h6>
+                            <div class="content-codigo">
+                                <PRE class="Q pre">
+<code id="code3">&#60;h1 class="L-bold"&#62;h1. Heading&#60;/h1&#62;
+&#60;h2 class="L-bold"&#62;h2. Heading&#60;/h2&#62;
+&#60;h3 class="L-bold"&#62;h3. Heading&#60;/h3&#62;
+&#60;h4 class="L-bold"&#62;h4. Heading&#60;/h4&#62;
+&#60;h5 class="L-bold"&#62;h5. Heading&#60;/h5&#62;
+&#60;h6 class="L-bold"&#62;h6. Heading&#60;/h6&#62;</code></PRE>
+                                <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                                    data-clipboard-target="#code3" id="copy-button">
+                                    <ion-icon name="documents"></ion-icon>
+                                </button>
+                            </div><br>
+                        </div>
+                    </div>
+
+                    <div class="content-doble">
+                        <div class="elemento-doble">
+                            <h1 class="Q-bold">h1. Heading</h1>
+                            <h2 class="Q-bold">h2. Heading</h2>
+                            <h3 class="Q-bold">h3. Heading</h3>
+                            <h4 class="Q-bold">h4. Heading</h4>
+                            <h5 class="Q-bold">h5. Heading</h5>
+                            <h6 class="Q-bold">h6. Heading</h6>
+                            <div class="content-codigo">
+                                <PRE class="Q pre">
+<code id="code4">&#60;h1 class="Q-bold"&#62;h1. Heading&#60;/h1&#62;
+&#60;h2 class="Q-bold"&#62;h2. Heading&#60;/h2&#62;
+&#60;h3 class="Q-bold"&#62;h3. Heading&#60;/h3&#62;
+&#60;h4 class="Q-bold"&#62;h4. Heading&#60;/h4&#62;
+&#60;h5 class="Q-bold"&#62;h5. Heading&#60;/h5&#62;
+&#60;h6 class="Q-bold"&#62;h6. Heading&#60;/h6&#62;</code></PRE>
+                                <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                                    data-clipboard-target="#code4" id="copy-button">
+                                    <ion-icon name="documents"></ion-icon>
+                                </button>
+                            </div><br>
+                        </div>
+                        <div class="elemento-doble texto-tipo">
+                            <h1 class="Q-bold">h1. Heading</h1>
+                            <h2 class="Q-bold">h2. Heading</h2>
+                            <h3 class="Q-bold">h3. Heading</h3>
+                            <h4 class="Q-bold">h4. Heading</h4>
+                            <h5 class="Q-bold">h5. Heading</h5>
+                            <h6 class="Q-bold">h6. Heading</h6>
+                            <div class="content-codigo">
+                                <PRE class="Q pre">
+<code id="code4">&#60;h1 class="Q-bold"&#62;h1. Heading&#60;/h1&#62;
+&#60;h2 class="Q-bold"&#62;h2. Heading&#60;/h2&#62;
+&#60;h3 class="Q-bold"&#62;h3. Heading&#60;/h3&#62;
+&#60;h4 class="Q-bold"&#62;h4. Heading&#60;/h4&#62;
+&#60;h5 class="Q-bold"&#62;h5. Heading&#60;/h5&#62;
+&#60;h6 class="Q-bold"&#62;h6. Heading&#60;/h6&#62;</code></PRE>
+                                <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                                    data-clipboard-target="#code4" id="copy-button">
+                                    <ion-icon name="documents"></ion-icon>
+                                </button>
+                            </div><br>
+                        </div>
+                    </div>
+
+                    <br>
+                    <hr>
+                    <h3 class="Q">Heading Secundario</h3>
+                    <p class="Q interlineado">
+                        El elemtno HTML &#60;small&#62; se usa para crear un titulo secundario después de cualquier
+                        encabezado.
+                    </p><br>
+                    <h6 class="Q-bold">Ejemplo:</h6><br>
+
+                    <h1 class="L-bold">Laila<small class="L-bold">Laila</small></h1>
+                    <h1 class="L-bold">h1 Heading<small class="L-bold">Heading Secucndario</small></h1>
+                    <h2 class="L-bold">h2 Heading<small class="L-bold">Heading Secucndario</small></h2>
+                    <h3 class="L-bold">h3 Heading<small class="L-bold">Heading Secucndario</small></h3>
+                    <h4 class="L-bold">h4 Heading<small class="L-bold">Heading Secucndario</small></h4>
+                    <h5 class="L-bold">h5 Heading<small class="L-bold">Heading Secucndario</small></h5>
+                    <h6 class="L-bold">h6 Heading<small class="L-bold">Heading Secucndario</small></h6>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;h1 class="L-bold"&#62;h1 Heading&#60;small class="L-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h1&#62;
+&#60;h2 class="L-bold"&#62;h2 Heading&#60;small class="L-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h2&#62;
+&#60;h3 class="L-bold"&#62;h3 Heading&#60;small class="L-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h3&#62;
+&#60;h4 class="L-bold"&#62;h4 Heading&#60;small class="L-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h4&#62;
+&#60;h5 class="L-bold"&#62;h5 Heading&#60;small class="L-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h5&#62;
+&#60;h6 class="L-bold"&#62;h6 Heading&#60;small class="L-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h6&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+                    <br>
+                    <h1 class="Q-bold">Quicksand<small class="Q-bold">Quicksand</small></h1>
+                    <h1 class="Q-bold">h1 Heading<small class="Q-bold">Heading Secucndario</small></h1>
+                    <h2 class="Q-bold">h2 Heading<small class="Q-bold">Heading Secucndario</small></h2>
+                    <h3 class="Q-bold">h3 Heading<small class="Q-bold">Heading Secucndario</small></h3>
+                    <h4 class="Q-bold">h4 Heading<small class="Q-bold">Heading Secucndario</small></h4>
+                    <h5 class="Q-bold">h5 Heading<small class="Q-bold">Heading Secucndario</small></h5>
+                    <h6 class="Q-bold">h6 Heading<small class="Q-bold">Heading Secucndario</small></h6>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;h1 class="Q-bold"&#62;h1 Heading&#60;small class="Q-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h1&#62;
+&#60;h2 class="Q-bold"&#62;h2 Heading&#60;small class="Q-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h2&#62;
+&#60;h3 class="Q-bold"&#62;h3 Heading&#60;small class="Q-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h3&#62;
+&#60;h4 class="Q-bold"&#62;h4 Heading&#60;small class="Q-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h4&#62;
+&#60;h5 class="Q-bold"&#62;h5 Heading&#60;small class="Q-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h5&#62;
+&#60;h6 class="Q-bold"&#62;h6 Heading&#60;small class="Q-bold"&#62;Heading Secucndario&#60;/small&#62;&#60;/h6&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+                    <h3 class="Q">Contraste</h3>
+                    <p class="Q interlineado">
+                        Se utiliza para asegurar que la lectura sea accesible para todo publico, es importante que exista un buen contraste del texto con el fondo.
+                    </p><br>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="340" viewBox="0 0 1172 340">
+  <g id="Grupo_1236" data-name="Grupo 1236" transform="translate(13520 -8949)">
+    <g id="Grupo_1235" data-name="Grupo 1235">
+      <g id="Trazado_86" data-name="Trazado 86" transform="translate(-13520 8949)" fill="#7fa4d6">
+        <path d="M 259.5 169.5 L 0.5 169.5 L 0.5 0.5 L 259.5 0.5 L 259.5 169.5 Z" stroke="none"/>
+        <path d="M 1 1 L 1 169 L 259 169 L 259 1 L 1 1 M 0 0 L 260 0 L 260 170 L 0 170 L 0 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Rectángulo_75" data-name="Rectángulo 75" transform="translate(-13216 8949)" fill="#b2c8e6" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <g id="Rectángulo_77" data-name="Rectángulo 77" transform="translate(-12912 8949)" fill="#e5ecf7" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <g id="Rectángulo_79" data-name="Rectángulo 79" transform="translate(-12608 8949)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <g id="Rectángulo_73" data-name="Rectángulo 73" transform="translate(-13520 9119)" fill="#b2e1f7" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <g id="Rectángulo_74" data-name="Rectángulo 74" transform="translate(-13216 9119)" fill="#ccebfa" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <g id="Rectángulo_76" data-name="Rectángulo 76" transform="translate(-12912 9119)" fill="#e5f5fc" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <g id="Rectángulo_78" data-name="Rectángulo 78" transform="translate(-12608 9119)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="260" height="170" stroke="none"/>
+        <rect x="0.5" y="0.5" width="259" height="169" fill="none"/>
+      </g>
+      <text id="Aa" transform="translate(-13422 9053)" fill="#004aad" font-size="50" font-family="Laila-Bold, Laila" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-2" data-name="Aa" transform="translate(-13422 9223)" fill="#019be3" font-size="50" font-family="Quicksand-Bold, Quicksand" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-3" data-name="Aa" transform="translate(-13122 9223)" fill="#019be3" font-size="50" font-family="Quicksand-Bold, Quicksand" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-4" data-name="Aa" transform="translate(-12814 9223)" fill="#019be3" font-size="50" font-family="Quicksand-Bold, Quicksand" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-5" data-name="Aa" transform="translate(-12814 9053)" fill="#004aad" font-size="50" font-family="Laila-Bold, Laila" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-6" data-name="Aa" transform="translate(-12510 9053)" fill="#004aad" font-size="50" font-family="Laila-Bold, Laila" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-7" data-name="Aa" transform="translate(-12510 9223)" fill="#019be3" font-size="50" font-family="Quicksand-Bold, Quicksand" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+      <text id="Aa-8" data-name="Aa" transform="translate(-13122 9053)" fill="#004aad" font-size="50" font-family="Laila-Bold, Laila" font-weight="700"><tspan x="0" y="0">Aa</tspan></text>
+    </g>
+  </g>
+</svg>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+            <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

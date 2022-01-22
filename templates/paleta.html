@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="active Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Paleta de color</h1><br>
+                    <h3 class="Q-bold">Primarios</h3>
+                    <p class="Q interlineado">
+                        Las aplicaciones que pertenezcan a CODEWAY SOLUCIONES INTEGRALES deberán utilizar los siguientes
+                        tonos como colores principales y en mayor porcentaje.
+                    </p><br>
+                    <h6 class="Q-bold">Ejemplo:</h6>
+
+                    <div class="color-pri">
+                        <div class="azul-cobalto"></div>
+                        <div class="azul-active"></div>
+                        <div class="azul-ligero"></div>
+                        <div class="name-color-pri Q">#004AAD Azul cobalto</div>
+                        <div class="name-color-pri Q">#2463B8 Azul active</div>
+                        <div class="name-color-pri Q">#019BE3 Azul ligero</div>
+                    </div>
+<hr>
+                    <h3 class="Q-bold">Secundarios</h3>
+                    <p class="Q interlineado">
+                        Se utilizan principalmente para reflejar estados como éxito, alerta, error e informativo. Se
+                        encuentran en poco porcentaje dentro de las apps.
+                    </p><br>
+                    <h6 class="Q-bold">Ejemplo:</h6>
+
+                    <div class="color-secu">
+                        <div class="rojo-ligero"></div>
+                        <div class="ama-ligero"></div>
+                        <div class="cian-brillante"></div>
+                        <div class="azul-brillante"></div>
+                        <div class="name-color-secu Q">#F28D77 Rojo ligero</div>
+                        <div class="name-color-secu Q">#F2EB8D Amarillo ligero</div>
+                        <div class="name-color-secu Q">#0FBFAE Cian brillante</div>
+                        <div class="name-color-secu Q">#0A7AA6 Azul brillante</div>
+                    </div>
+<hr>
+                    <h3 class="Q-bold">Saturación de tonos primarios</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="640" viewBox="0 0 1219 640">
+  <g id="Grupo_1237" data-name="Grupo 1237" transform="translate(14299 -4433)">
+    <rect id="Rectángulo_1059" data-name="Rectángulo 1059" width="376" height="640" transform="translate(-13456 4433)" fill="#fff"/>
+    <rect id="Rectángulo_1058" data-name="Rectángulo 1058" width="376" height="640" transform="translate(-13875 4433)" fill="#fff"/>
+    <rect id="Rectángulo_1057" data-name="Rectángulo 1057" width="376" height="640" transform="translate(-14299 4433)" fill="#fff"/>
+    <g id="Grupo_502" data-name="Grupo 502" transform="translate(-14410 4248)">
+      <rect id="Rectangle_25_Copy_11" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 185)" fill="#004aad"/>
+      <rect id="Rectangle_25_Copy_11-2" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 249)" fill="#004aad" opacity="0.9"/>
+      <rect id="Rectangle_25_Copy_11-3" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 313)" fill="#004aad" opacity="0.8"/>
+      <rect id="Rectangle_25_Copy_11-4" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 377)" fill="#004aad" opacity="0.7"/>
+      <rect id="Rectangle_25_Copy_11-5" data-name="Rectangle 25 Copy 11" width="328" height="65" transform="translate(159 441)" fill="#004aad" opacity="0.6"/>
+      <rect id="Rectangle_25_Copy_11-6" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 505)" fill="#004aad" opacity="0.5"/>
+      <rect id="Rectangle_25_Copy_11-7" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 569)" fill="#004aad" opacity="0.4"/>
+      <rect id="Rectangle_25_Copy_11-8" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 633)" fill="#004aad" opacity="0.3"/>
+      <rect id="Rectangle_25_Copy_11-9" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 697)" fill="#004aad" opacity="0.2"/>
+      <rect id="Rectangle_25_Copy_11-10" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(159 761)" fill="#004aad" opacity="0.1"/>
+      <text id="_002278" data-name="#002278" transform="translate(363 205)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="13.653" y="18">#004AAD</tspan></text>
+      <text id="_900_copy_2" data-name="900 copy 2" transform="translate(174 205)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+      <text id="_800_copy_2" data-name="800 copy 2" transform="translate(175 269)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+      <text id="_00338D" data-name="#00338D" transform="translate(360 269)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.673" y="18">#195BB5</tspan></text>
+      <text id="_700_copy_2" data-name="700 copy 2" transform="translate(175 333)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+      <text id="_0F3D99" data-name="#0F3D99" transform="translate(360 333)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.973" y="18">#336EBD</tspan></text>
+      <text id="_600_copy_2" data-name="600 copy 2" transform="translate(174 397)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+      <text id="_1D46A5" data-name="#1D46A5" transform="translate(359 397)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.775" y="18">#4C80C5</tspan></text>
+      <text id="_500_copy_2" data-name="500 copy 2" transform="translate(175 461)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+      <text id="_244EAE" data-name="#244EAE" transform="translate(360 461)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.259" y="18">#6692CE</tspan></text>
+      <text id="_400_copy_2" data-name="400 copy 2" transform="translate(175 525)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+      <text id="_4C68BA" data-name="#4C68BA" transform="translate(359 525)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.883" y="18">#7FA4D6</tspan></text>
+      <text id="_300_copy_2" data-name="300 copy 2" transform="translate(174 589)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+      <text id="_6D83C5" data-name="#6D83C5" transform="translate(359 589)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="16.857" y="18">#99B6DE</tspan></text>
+      <text id="_200_copy_2" data-name="200 copy 2" transform="translate(175 653)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+      <text id="_97A5D6" data-name="#97A5D6" transform="translate(359 653)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.783" y="18">#B2C8E6</tspan></text>
+      <text id="_100_copy_2" data-name="100 copy 2" transform="translate(175 717)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+      <text id="_C0C8E6" data-name="#C0C8E6" transform="translate(360 717)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="14.571" y="18">#CCDBEF</tspan></text>
+      <text id="_50_copy_2" data-name="50 copy 2" transform="translate(174 781)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+      <text id="_E6E9F5" data-name="#E6E9F5" transform="translate(360 781)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.971" y="18">#E5ECF7</tspan></text>
+      <rect id="Rectangle" width="48" height="640" transform="translate(111 185)" fill="#004aad"/>
+    </g>
+    <g id="Grupo_503" data-name="Grupo 503" transform="translate(-14410 4248)">
+      <rect id="Rectangle_25_Copy_11-11" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 185)" fill="#2463b8"/>
+      <rect id="Rectangle_25_Copy_11-12" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 249)" fill="#2463b8" opacity="0.9"/>
+      <rect id="Rectangle_25_Copy_11-13" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 313)" fill="#2463b8" opacity="0.8"/>
+      <rect id="Rectangle_25_Copy_11-14" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 377)" fill="#2463b8" opacity="0.7"/>
+      <rect id="Rectangle_25_Copy_11-15" data-name="Rectangle 25 Copy 11" width="328" height="65" transform="translate(583 441)" fill="#2463b8" opacity="0.6"/>
+      <rect id="Rectangle_25_Copy_11-16" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 505)" fill="#2463b8" opacity="0.5"/>
+      <rect id="Rectangle_25_Copy_11-17" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 569)" fill="#2463b8" opacity="0.4"/>
+      <rect id="Rectangle_25_Copy_11-18" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 633)" fill="#2463b8" opacity="0.3"/>
+      <rect id="Rectangle_25_Copy_11-19" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 697)" fill="#2463b8" opacity="0.2"/>
+      <rect id="Rectangle_25_Copy_11-20" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(583 761)" fill="#2463b8" opacity="0.1"/>
+      <text id="_002278-2" data-name="#002278" transform="translate(787 205)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.115" y="18">#2463B8</tspan></text>
+      <text id="_900_copy_2-2" data-name="900 copy 2" transform="translate(598 205)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+      <text id="_800_copy_2-2" data-name="800 copy 2" transform="translate(599 269)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+      <text id="_00338D-2" data-name="#00338D" transform="translate(787 269)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.835" y="18">#3972BF</tspan></text>
+      <text id="_700_copy_2-2" data-name="700 copy 2" transform="translate(599 333)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+      <text id="_0F3D99-2" data-name="#0F3D99" transform="translate(787 333)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.169" y="18">#4F82C6</tspan></text>
+      <text id="_600_copy_2-2" data-name="600 copy 2" transform="translate(598 397)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+      <text id="_1D46A5-2" data-name="#1D46A5" transform="translate(787 397)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.511" y="18">#6591CD</tspan></text>
+      <text id="_500_copy_2-2" data-name="500 copy 2" transform="translate(599 461)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+      <text id="_244EAE-2" data-name="#244EAE" transform="translate(787 461)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.585" y="18">#7BA1D4</tspan></text>
+      <text id="_400_copy_2-2" data-name="400 copy 2" transform="translate(599 525)" fill="#2463b8" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+      <text id="_4C68BA-2" data-name="#4C68BA" transform="translate(787 525)" fill="#2463b8" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.487" y="18">#91B0DB</tspan></text>
+      <text id="_300_copy_2-2" data-name="300 copy 2" transform="translate(598 589)" fill="#2463b8" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+      <text id="_6D83C5-2" data-name="#6D83C5" transform="translate(787 589)" fill="#2463b8" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.891" y="18">#A7C0E3</tspan></text>
+      <text id="_200_copy_2-2" data-name="200 copy 2" transform="translate(599 653)" fill="#2463b8" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+      <text id="_97A5D6-2" data-name="#97A5D6" transform="translate(787 653)" fill="#2463b8" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="13.419" y="18">#BCD0EA</tspan></text>
+      <text id="_100_copy_2-2" data-name="100 copy 2" transform="translate(599 717)" fill="#2463b8" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+      <text id="_C0C8E6-2" data-name="#C0C8E6" transform="translate(787 717)" fill="#2463b8" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.213" y="18">#D3E0F1</tspan></text>
+      <text id="_50_copy_2-2" data-name="50 copy 2" transform="translate(598 781)" fill="#2463b8" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+      <text id="_E6E9F5-2" data-name="#E6E9F5" transform="translate(787 781)" fill="#2463b8" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.663" y="18">#E8EFF8</tspan></text>
+      <rect id="Rectangle-2" data-name="Rectangle" width="48" height="640" transform="translate(535 185)" fill="#2463b8"/>
+    </g>
+    <g id="Grupo_504" data-name="Grupo 504" transform="translate(-14410 4248)">
+      <rect id="Rectangle_25_Copy_11-21" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 185)" fill="#019be3"/>
+      <rect id="Rectangle_25_Copy_11-22" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 249)" fill="#019be3" opacity="0.9"/>
+      <rect id="Rectangle_25_Copy_11-23" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 313)" fill="#019be3" opacity="0.8"/>
+      <rect id="Rectangle_25_Copy_11-24" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 377)" fill="#019be3" opacity="0.7"/>
+      <rect id="Rectangle_25_Copy_11-25" data-name="Rectangle 25 Copy 11" width="328" height="65" transform="translate(1002 441)" fill="#019be3" opacity="0.6"/>
+      <rect id="Rectangle_25_Copy_11-26" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 505)" fill="#019be3" opacity="0.5"/>
+      <rect id="Rectangle_25_Copy_11-27" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 569)" fill="#019be3" opacity="0.4"/>
+      <rect id="Rectangle_25_Copy_11-28" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 633)" fill="#019be3" opacity="0.3"/>
+      <rect id="Rectangle_25_Copy_11-29" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 697)" fill="#019be3" opacity="0.2"/>
+      <rect id="Rectangle_25_Copy_11-30" data-name="Rectangle 25 Copy 11" width="328" height="64" transform="translate(1002 761)" fill="#019be3" opacity="0.1"/>
+      <text id="_002278-3" data-name="#002278" transform="translate(1206 205)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.185" y="18">#019BE3</tspan></text>
+      <text id="_900_copy_2-3" data-name="900 copy 2" transform="translate(1017 205)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+      <text id="_800_copy_2-3" data-name="800 copy 2" transform="translate(1018 269)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+      <text id="_00338D-3" data-name="#00338D" transform="translate(1206 269)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.239" y="18">#19A4E5</tspan></text>
+      <text id="_700_copy_2-3" data-name="700 copy 2" transform="translate(1018 333)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+      <text id="_0F3D99-3" data-name="#0F3D99" transform="translate(1206 333)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.105" y="18">#33AFE8</tspan></text>
+      <text id="_600_copy_2-3" data-name="600 copy 2" transform="translate(1017 397)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+      <text id="_1D46A5-3" data-name="#1D46A5" transform="translate(1206 397)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="16.605" y="18">#4CB8EB</tspan></text>
+      <text id="_500_copy_2-3" data-name="500 copy 2" transform="translate(1018 461)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+      <text id="_244EAE-3" data-name="#244EAE" transform="translate(1206 461)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.763" y="18">#66C3EE</tspan></text>
+      <text id="_400_copy_2-3" data-name="400 copy 2" transform="translate(1018 525)" fill="#019be3" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+      <text id="_4C68BA-3" data-name="#4C68BA" transform="translate(1206 525)" fill="#019be3" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.105" y="18">#7FCDF1</tspan></text>
+      <text id="_300_copy_2-3" data-name="300 copy 2" transform="translate(1017 589)" fill="#019be3" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+      <text id="_6D83C5-3" data-name="#6D83C5" transform="translate(1206 589)" fill="#019be3" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.035" y="18">#99D7F4</tspan></text>
+      <text id="_200_copy_2-3" data-name="200 copy 2" transform="translate(1018 653)" fill="#019be3" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+      <text id="_97A5D6-3" data-name="#97A5D6" transform="translate(1206 653)" fill="#019be3" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.887" y="18">#B2E1F7</tspan></text>
+      <text id="_100_copy_2-3" data-name="100 copy 2" transform="translate(1018 717)" fill="#019be3" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+      <text id="_C0C8E6-3" data-name="#C0C8E6" transform="translate(1206 717)" fill="#019be3" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="16.515" y="18">#CCEBFA</tspan></text>
+      <text id="_50_copy_2-3" data-name="50 copy 2" transform="translate(1017 781)" fill="#019be3" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+      <text id="_E6E9F5-3" data-name="#E6E9F5" transform="translate(1206 781)" fill="#019be3" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.827" y="18">#E5F5FC</tspan></text>
+      <rect id="Rectangle-3" data-name="Rectangle" width="48" height="640" transform="translate(954 185)" fill="#019be3"/>
+    </g>
+  </g>
+</svg>
+
+
+<hr>
+                    <h3 class="Q-bold">Saturación de tonos secundarios</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="642" viewBox="0 0 1250 642">
+  <g id="Grupo_1236" data-name="Grupo 1236" transform="translate(12201 -4273)">
+    <rect id="Rectángulo_1056" data-name="Rectángulo 1056" width="257" height="640" transform="translate(-11208 4273)" fill="#fff"/>
+    <rect id="Rectángulo_1055" data-name="Rectángulo 1055" width="257" height="640" transform="translate(-11539 4275)" fill="#fff"/>
+    <rect id="Rectángulo_1052" data-name="Rectángulo 1052" width="257" height="640" transform="translate(-11870 4275)" fill="#fff"/>
+    <rect id="Rectángulo_1053" data-name="Rectángulo 1053" width="257" height="640" transform="translate(-12201 4275)" fill="#fff"/>
+    <g id="Grupo_1235" data-name="Grupo 1235">
+      <rect id="Rectangle_25_Copy_11" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-12153 4275)" fill="#f28d77"/>
+      <rect id="Rectangle_25_Copy_11-2" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-12153 4339)" fill="#f28d77" opacity="0.9"/>
+      <rect id="Rectangle_25_Copy_11-3" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-12153 4403)" fill="#f28d77" opacity="0.8"/>
+      <rect id="Rectangle_25_Copy_11-4" data-name="Rectangle 25 Copy 11" width="209" height="63" transform="translate(-12153 4467)" fill="#f28d77" opacity="0.7"/>
+      <rect id="Rectangle_25_Copy_11-5" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-12153 4530)" fill="#f28d77" opacity="0.6"/>
+      <rect id="Rectangle_25_Copy_11-6" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-12153 4594)" fill="#f28d77" opacity="0.5"/>
+      <rect id="Rectangle_25_Copy_11-7" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-12153 4659)" fill="#f28d77" opacity="0.4"/>
+      <rect id="Rectangle_25_Copy_11-8" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-12153 4722)" fill="#f28d77" opacity="0.3"/>
+      <rect id="Rectangle_25_Copy_11-9" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-12153 4786)" fill="#f28d77" opacity="0.2"/>
+      <rect id="Rectangle_25_Copy_11-10" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-12153 4786)" fill="#f28d77" opacity="0.2"/>
+      <rect id="Rectangle_25_Copy_11-11" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-12153 4851)" fill="#f28d77" opacity="0.1"/>
+      <text id="_A52B29" data-name="#A52B29" transform="translate(-12059 4292)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.079" y="18">#F28D77</tspan></text>
+      <text id="_900_copy_2" data-name="900 copy 2" transform="translate(-12137 4292)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+      <text id="_800_copy_2" data-name="800 copy 2" transform="translate(-12137 4358)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+      <text id="_B53333" data-name="#B53333" transform="translate(-12059 4358)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.897" y="18">#F39884</tspan></text>
+      <text id="_700_copy_2" data-name="700 copy 2" transform="translate(-12137 4422)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+      <text id="_C2393A" data-name="#C2393A" transform="translate(-12061 4423)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.881" y="18">#F4A392</tspan></text>
+      <text id="_600_copy_2" data-name="600 copy 2" transform="translate(-12137 4486)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+      <text id="_D44140" data-name="#D44140" transform="translate(-12062 4486)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.187" y="18">#F6AF9F</tspan></text>
+      <text id="_500_copy_2" data-name="500 copy 2" transform="translate(-12135 4550)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+      <text id="_E34A42" data-name="#E34A42" transform="translate(-12059 4550)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="15.553" y="18">#F7BAAD</tspan></text>
+      <text id="_400_copy_2" data-name="400 copy 2" transform="translate(-12137 4615)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+      <text id="_DF5858" data-name="#DF5858" transform="translate(-12059 4615)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.703" y="18">#F8C6BA</tspan></text>
+      <text id="_300_copy_2" data-name="300 copy 2" transform="translate(-12138 4679)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+      <text id="_D67578" data-name="#D67578" transform="translate(-12059 4679)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.151" y="18">#FAD1C8</tspan></text>
+      <text id="_200_copy_2" data-name="200 copy 2" transform="translate(-12137 4743)" fill="#00338d" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+      <text id="_E49B9D" data-name="#E49B9D" transform="translate(-12059 4742)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="14.329" y="18">#FBDCD6</tspan></text>
+      <text id="_100_copy_2" data-name="100 copy 2" transform="translate(-12137 4807)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+      <text id="_F7CDD3" data-name="#F7CDD3" transform="translate(-12059 4807)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.189" y="18">#FDE8E4</tspan></text>
+      <text id="_50_copy_2" data-name="50 copy 2" transform="translate(-12138 4871)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+      <text id="_FCEBEE" data-name="#FCEBEE" transform="translate(-12060 4871)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="25.903" y="18">#FEF3F1</tspan></text>
+      <rect id="Rectangle" width="48" height="640" transform="translate(-12201 4275)" fill="#f28d77"/>
+    </g>
+    <rect id="Rectangle_25_Copy_11-12" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11822 4275)" fill="#f2eb8d"/>
+    <rect id="Rectangle_25_Copy_11-13" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11822 4339)" fill="#f2eb8d" opacity="0.9"/>
+    <rect id="Rectangle_25_Copy_11-14" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11822 4403)" fill="#f2eb8d" opacity="0.8"/>
+    <rect id="Rectangle_25_Copy_11-15" data-name="Rectangle 25 Copy 11" width="209" height="63" transform="translate(-11822 4467)" fill="#f2eb8d" opacity="0.7"/>
+    <rect id="Rectangle_25_Copy_11-16" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11822 4530)" fill="#f2eb8d" opacity="0.6"/>
+    <rect id="Rectangle_25_Copy_11-17" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11822 4594)" fill="#f2eb8d" opacity="0.5"/>
+    <rect id="Rectangle_25_Copy_11-18" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11822 4659)" fill="#f2eb8d" opacity="0.4"/>
+    <rect id="Rectangle_25_Copy_11-19" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11822 4722)" fill="#f2eb8d" opacity="0.3"/>
+    <rect id="Rectangle_25_Copy_11-20" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11822 4786)" fill="#f2eb8d" opacity="0.2"/>
+    <rect id="Rectangle_25_Copy_11-21" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11822 4786)" fill="#f2eb8d" opacity="0.2"/>
+    <rect id="Rectangle_25_Copy_11-22" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11822 4851)" fill="#f2eb8d" opacity="0.1"/>
+    <text id="_A52B29-2" data-name="#A52B29" transform="translate(-11728 4292)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.037" y="18">#F2EB8D</tspan></text>
+    <text id="_900_copy_2-2" data-name="900 copy 2" transform="translate(-11806 4292)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+    <text id="_800_copy_2-2" data-name="800 copy 2" transform="translate(-11806 4358)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+    <text id="_B53333-2" data-name="#B53333" transform="translate(-11728 4358)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.179" y="18">#F3ED98</tspan></text>
+    <text id="_700_copy_2-2" data-name="700 copy 2" transform="translate(-11806 4422)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+    <text id="_C2393A-2" data-name="#C2393A" transform="translate(-11730 4423)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.511" y="18">#F4EFA3</tspan></text>
+    <text id="_600_copy_2-2" data-name="600 copy 2" transform="translate(-11806 4486)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+    <text id="_D44140-2" data-name="#D44140" transform="translate(-11731 4486)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="24.409" y="18">#F6F1AF</tspan></text>
+    <text id="_500_copy_2-2" data-name="500 copy 2" transform="translate(-11804 4550)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+    <text id="_E34A42-2" data-name="#E34A42" transform="translate(-11728 4550)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.143" y="18">#F7F3BA</tspan></text>
+    <rect id="Rectangle-2" data-name="Rectangle" width="48" height="640" transform="translate(-11870 4275)" fill="#f2eb8d"/>
+    <rect id="Rectangle_25_Copy_11-23" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11491 4274)" fill="#0fbfae"/>
+    <rect id="Rectangle_25_Copy_11-24" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11491 4338)" fill="#0fbfae" opacity="0.9"/>
+    <rect id="Rectangle_25_Copy_11-25" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11491 4402)" fill="#0fbfae" opacity="0.8"/>
+    <rect id="Rectangle_25_Copy_11-26" data-name="Rectangle 25 Copy 11" width="209" height="63" transform="translate(-11491 4466)" fill="#0fbfae" opacity="0.7"/>
+    <rect id="Rectangle_25_Copy_11-27" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11491 4529)" fill="#0fbfae" opacity="0.6"/>
+    <rect id="Rectangle_25_Copy_11-28" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11491 4593)" fill="#0fbfae" opacity="0.5"/>
+    <rect id="Rectangle_25_Copy_11-29" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11491 4658)" fill="#0fbfae" opacity="0.4"/>
+    <rect id="Rectangle_25_Copy_11-30" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11491 4721)" fill="#0fbfae" opacity="0.3"/>
+    <rect id="Rectangle_25_Copy_11-31" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11491 4785)" fill="#0fbfae" opacity="0.2"/>
+    <rect id="Rectangle_25_Copy_11-32" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11491 4785)" fill="#0fbfae" opacity="0.2"/>
+    <rect id="Rectangle_25_Copy_11-33" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11491 4850)" fill="#0fbfae" opacity="0.1"/>
+    <text id="_A52B29-3" data-name="#A52B29" transform="translate(-11397 4291)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.919" y="18">#0FBFAE</tspan></text>
+    <text id="_900_copy_2-3" data-name="900 copy 2" transform="translate(-11475 4291)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+    <text id="_800_copy_2-3" data-name="800 copy 2" transform="translate(-11475 4357)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+    <text id="_B53333-3" data-name="#B53333" transform="translate(-11397 4357)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.621" y="18">#26C5B6</tspan></text>
+    <text id="_700_copy_2-3" data-name="700 copy 2" transform="translate(-11475 4421)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+    <text id="_C2393A-3" data-name="#C2393A" transform="translate(-11399 4422)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.433" y="18">#3FCBBE</tspan></text>
+    <text id="_600_copy_2-3" data-name="600 copy 2" transform="translate(-11475 4485)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+    <text id="_D44140-3" data-name="#D44140" transform="translate(-11400 4485)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.541" y="18">#56D2C6</tspan></text>
+    <text id="_500_copy_2-3" data-name="500 copy 2" transform="translate(-11473 4549)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+    <text id="_E34A42-3" data-name="#E34A42" transform="translate(-11397 4549)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.829" y="18">#6FD8CE</tspan></text>
+    <rect id="Rectangle-3" data-name="Rectangle" width="48" height="640" transform="translate(-11539 4274)" fill="#0fbfae"/>
+    <rect id="Rectangle_25_Copy_11-34" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11160 4273)" fill="#0a7aa6"/>
+    <rect id="Rectangle_25_Copy_11-35" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11160 4337)" fill="#0a7aa6" opacity="0.9"/>
+    <rect id="Rectangle_25_Copy_11-36" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11160 4401)" fill="#0a7aa6" opacity="0.8"/>
+    <rect id="Rectangle_25_Copy_11-37" data-name="Rectangle 25 Copy 11" width="209" height="63" transform="translate(-11160 4465)" fill="#0a7aa6" opacity="0.7"/>
+    <rect id="Rectangle_25_Copy_11-38" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11160 4528)" fill="#0a7aa6" opacity="0.6"/>
+    <rect id="Rectangle_25_Copy_11-39" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11160 4592)" fill="#0a7aa6" opacity="0.5"/>
+    <rect id="Rectangle_25_Copy_11-40" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11160 4657)" fill="#0a7aa6" opacity="0.4"/>
+    <rect id="Rectangle_25_Copy_11-41" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11160 4720)" fill="#0a7aa6" opacity="0.3"/>
+    <rect id="Rectangle_25_Copy_11-42" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11160 4784)" fill="#0a7aa6" opacity="0.2"/>
+    <rect id="Rectangle_25_Copy_11-43" data-name="Rectangle 25 Copy 11" width="209" height="65" transform="translate(-11160 4784)" fill="#0a7aa6" opacity="0.2"/>
+    <rect id="Rectangle_25_Copy_11-44" data-name="Rectangle 25 Copy 11" width="209" height="64" transform="translate(-11160 4849)" fill="#0a7aa6" opacity="0.1"/>
+    <text id="_A52B29-4" data-name="#A52B29" transform="translate(-11066 4290)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.911" y="18">#0A7AA6</tspan></text>
+    <text id="_900_copy_2-4" data-name="900 copy 2" transform="translate(-11144 4290)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">900</tspan></text>
+    <text id="_800_copy_2-4" data-name="800 copy 2" transform="translate(-11144 4356)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">800</tspan></text>
+    <text id="_B53333-4" data-name="#B53333" transform="translate(-11066 4356)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.187" y="18">#2287AE</tspan></text>
+    <text id="_700_copy_2-4" data-name="700 copy 2" transform="translate(-11144 4420)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">700</tspan></text>
+    <text id="_C2393A-4" data-name="#C2393A" transform="translate(-11068 4421)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.279" y="18">#3B94B7</tspan></text>
+    <text id="_600_copy_2-4" data-name="600 copy 2" transform="translate(-11144 4484)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">600</tspan></text>
+    <text id="_D44140-4" data-name="#D44140" transform="translate(-11069 4484)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.339" y="18">#53A1C0</tspan></text>
+    <text id="_500_copy_2-4" data-name="500 copy 2" transform="translate(-11142 4548)" fill="#fff" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">500</tspan></text>
+    <text id="_E34A42-4" data-name="#E34A42" transform="translate(-11066 4548)" fill="#fff" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.009" y="18">#6CAFC9</tspan></text>
+    <text id="_400_copy_2-2" data-name="400 copy 2" transform="translate(-11806 4615)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+    <text id="_DF5858-2" data-name="#DF5858" transform="translate(-11728 4615)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="21.511" y="18">#F8F5C6</tspan></text>
+    <text id="_300_copy_2-2" data-name="300 copy 2" transform="translate(-11807 4679)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+    <text id="_D67578-2" data-name="#D67578" transform="translate(-11728 4679)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.303" y="18">#FAF7D1</tspan></text>
+    <text id="_200_copy_2-2" data-name="200 copy 2" transform="translate(-11806 4743)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+    <text id="_E49B9D-2" data-name="#E49B9D" transform="translate(-11728 4742)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="16.813" y="18">#FBF9DC</tspan></text>
+    <text id="_100_copy_2-2" data-name="100 copy 2" transform="translate(-11806 4807)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+    <text id="_F7CDD3-2" data-name="#F7CDD3" transform="translate(-11728 4807)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.171" y="18">#FCF8D6</tspan></text>
+    <text id="_50_copy_2-2" data-name="50 copy 2" transform="translate(-11807 4871)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+    <text id="_FCEBEE-2" data-name="#FCEBEE" transform="translate(-11729 4871)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.035" y="18">#FEFDF3</tspan></text>
+    <text id="_400_copy_2-3" data-name="400 copy 2" transform="translate(-11475 4614)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+    <text id="_DF5858-3" data-name="#DF5858" transform="translate(-11397 4614)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.587" y="18">#86DFD6</tspan></text>
+    <text id="_300_copy_2-3" data-name="300 copy 2" transform="translate(-11476 4678)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+    <text id="_D67578-3" data-name="#D67578" transform="translate(-11397 4678)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.225" y="18">#9FE5DF</tspan></text>
+    <text id="_200_copy_2-3" data-name="200 copy 2" transform="translate(-11475 4742)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+    <text id="_E49B9D-3" data-name="#E49B9D" transform="translate(-11397 4741)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="19.711" y="18">#B6ECE7</tspan></text>
+    <text id="_100_copy_2-3" data-name="100 copy 2" transform="translate(-11475 4806)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+    <text id="_F7CDD3-3" data-name="#F7CDD3" transform="translate(-11397 4806)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="20.791" y="18">#A9E8E2</tspan></text>
+    <text id="_50_copy_2-3" data-name="50 copy 2" transform="translate(-11476 4870)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+    <text id="_FCEBEE-3" data-name="#FCEBEE" transform="translate(-11398 4870)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="22.627" y="18">#E6F9F7</tspan></text>
+    <text id="_400_copy_2-4" data-name="400 copy 2" transform="translate(-11144 4613)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">400</tspan></text>
+    <text id="_DF5858-4" data-name="#DF5858" transform="translate(-11066 4613)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="16.579" y="18">#84BCD2</tspan></text>
+    <text id="_300_copy_2-4" data-name="300 copy 2" transform="translate(-11145 4677)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">300</tspan></text>
+    <text id="_D67578-4" data-name="#D67578" transform="translate(-11066 4677)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="12.673" y="18">#9DCADB</tspan></text>
+    <text id="_200_copy_2-4" data-name="200 copy 2" transform="translate(-11144 4741)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">200</tspan></text>
+    <text id="_E49B9D-4" data-name="#E49B9D" transform="translate(-11066 4740)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="18.145" y="18">#B5D7E4</tspan></text>
+    <text id="_100_copy_2-4" data-name="100 copy 2" transform="translate(-11144 4805)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">100</tspan></text>
+    <text id="_F7CDD3-4" data-name="#F7CDD3" transform="translate(-11066 4805)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="17.803" y="18">#A7CFDF</tspan></text>
+    <text id="_50_copy_2-4" data-name="50 copy 2" transform="translate(-11145 4869)" fill="#004aad" font-size="16" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="0" y="16">50</tspan></text>
+    <text id="_FCEBEE-4" data-name="#FCEBEE" transform="translate(-11067 4869)" fill="#004aad" font-size="18" font-family="Quicksand-Bold, Quicksand" font-weight="700" letter-spacing="0.012em"><tspan x="25.777" y="18">#E6F1F6</tspan></text>
+    <rect id="Rectangle-4" data-name="Rectangle" width="48" height="640" transform="translate(-11208 4273)" fill="#0a7aa6"/>
+  </g>
+</svg>
+
+
+                    <br>
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+            <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

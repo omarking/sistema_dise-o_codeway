@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Badges y Collapse</h1><br>
+
+                    <p class="Q interlineado">
+                        Estos componente se utiliza para agregar información adicional a cualquier contenido.
+                    </p><br>
+
+                    <h1 class="Q">Example heading <span class="badge bg-primary">New</span></h1>
+                    <h2 class="Q">Example heading <span class="badge bg-secondary">New</span></h2>
+                    <h3 class="Q">Example heading <span class="badge bg-success">New</span></h3>
+                    <h4 class="Q">Example heading <span class="badge bg-danger">New</span></h4>
+                    <h5 class="Q">Example heading <span class="badge bg-warning">New</span></h5>
+                    <h6 class="Q">Example heading <span class="badge bg-info">New</span></h6>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;h1 class="Q"&#62;Example heading &#60;span class="badge bg-primary"&#62;New&#60;/span&#62;&#60;/h1&#62;
+&#60;h2 class="Q"&#62;Example heading &#60;span class="badge bg-secondary"&#62;New&#60;/span&#62;&#60;/h2&#62;
+&#60;h3 class="Q"&#62;Example heading &#60;span class="badge bg-success"&#62;New&#60;/span&#62;&#60;/h3&#62;
+&#60;h4 class="Q"&#62;Example heading &#60;span class="badge bg-danger"&#62;New&#60;/span&#62;&#60;/h4&#62;
+&#60;h5 class="Q"&#62;Example heading &#60;span class="badge bg-warning"&#62;New&#60;/span&#62;&#60;/h5&#62;
+&#60;h6 class="Q"&#62;Example heading &#60;span class="badge bg-info"&#62;New&#60;/span&#62;&#60;/h6&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Botones</h3>
+
+                    <p class="Q interlineado">
+                        Los Badges se pueden utilizar como parte de enlaces o botones para proporcionar un contador.
+                    </p>
+
+                    <button type="button" class="btn btn-primary Q">
+                        Notifications <span class="badge bg-secondary">4</span>
+                    </button>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;button type="button" class="btn btn-primary Q"&#62;
+    Notifications &#60;span class="badge bg-secondary"&#62;4&#60;/span&#62;
+&#60;/button&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Posicionado</h3>
+
+                    <br>
+
+                    <button type="button" class="btn btn-primary position-relative Q">
+                        Inbox
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;button type="button" class="btn btn-primary position-relative Q"&#62;
+    Inbox
+    &#60;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&#62;
+        99+
+        &#60;span class="visually-hidden"&#62;unread messages&#60;/span&#62;
+    &#60;/span&#62;
+&#60;/button&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <button type="button" class="btn btn-primary position-relative Q">
+                        Profile
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </button>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;button type="button" class="btn btn-primary position-relative Q"&#62;
+    Profile
+    &#60;span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"&#62;
+        &#60;span class="visually-hidden"&#62;New alerts&#60;/span&#62;
+    &#60;/span&#62;
+&#60;/button&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Colores de fondo y texto</h3>
+
+                    <p class="Q interlineado">
+                        Puede utilizar y combinar los colores de fondo de cualquier elemento utilizando la clase
+                        <b>.bg-*</b> con el color contextual deseado.
+                        <br>
+                        De igual forma puede cambiar el color del texto con la clase <b>.text-*</b>.
+                    </p>
+
+                    <span class="badge bg-primary Q">Primary</span>
+                    <span class="badge bg-secondary Q">Secondary</span>
+                    <span class="badge bg-success Q">Success</span>
+                    <span class="badge bg-danger Q">Danger</span>
+                    <span class="badge bg-warning text-dark Q">Warning</span>
+                    <span class="badge bg-info text-dark Q">Info</span>
+                    <span class="badge bg-light text-dark Q">Light</span>
+                    <span class="badge bg-dark Q">Dark</span>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;span class="badge bg-primary Q"&#62;Primary&#60;/span&#62;
+&#60;span class="badge bg-secondary Q"&#62;Secondary&#60;/span&#62;
+&#60;span class="badge bg-success Q"&#62;Success&#60;/span&#62;
+&#60;span class="badge bg-danger Q"&#62;Danger&#60;/span&#62;
+&#60;span class="badge bg-warning text-dark Q"&#62;Warning&#60;/span&#62;
+&#60;span class="badge bg-info text-dark Q"&#62;Info&#60;/span&#62;
+&#60;span class="badge bg-light text-dark Q"&#62;Light&#60;/span&#62;
+&#60;span class="badge bg-dark Q"&#62;Dark&#60;/span&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Badges en forma de pastillas</h3>
+
+                    <p class="Q interlineado">
+                        Puede utilizar la clase <b>.rounded-pill</b> para volver redondeadas las badges.
+                    </p>
+
+                    <span class="badge rounded-pill bg-primary Q">Primary</span>
+                    <span class="badge rounded-pill bg-secondary Q">Secondary</span>
+                    <span class="badge rounded-pill bg-success Q">Success</span>
+                    <span class="badge rounded-pill bg-danger Q">Danger</span>
+                    <span class="badge rounded-pill bg-warning text-dark Q">Warning</span>
+                    <span class="badge rounded-pill bg-info text-dark Q">Info</span>
+                    <span class="badge rounded-pill bg-light text-dark Q">Light</span>
+                    <span class="badge rounded-pill bg-dark Q">Dark</span>
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;span class="badge rounded-pill bg-primary Q"&#62;Primary&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-secondary Q"&#62;Secondary&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-success Q"&#62;Success&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-danger Q"&#62;Danger&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-warning text-dark Q"&#62;Warning&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-info text-dark Q"&#62;Info&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-light text-dark Q"&#62;Light&#60;/span&#62;
+&#60;span class="badge rounded-pill bg-dark Q"&#62;Dark&#60;/span&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="collapse">Collapse</h1><br>
+
+                    <p class="Q interlineado">
+                        Este componente sirve para mostrar contenido muy amplio, pero que de inicio de esta oculto.
+                        <br>
+                        Haga clic en los botones de abajo para mostrar y ocultar otro elemento a través de cambios de
+                        clase:
+                        <br>
+                        <ul>
+                            <li><b>.collapse</b> oculta el contenido</li>
+                            <li><b>.collapsing</b> se aplica durante las transiciones.</li>
+                            <li><b>.collapse.show</b> muestra contenido</li>
+                        </ul>
+                        <br>
+                        Generalmente, recomendamos usar un botón con el atributo <b>data-bs-target</b>.
+                        Aunque no se recomienda desde un punto de vista semántico, también puede utilizar un enlace con
+                        el atributo href (y un <b>role = "button"</b>). <br>
+                        En ambos casos, se requiere <b>data-bs-toggle = "collapse"</b>.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+                        <p class="Q">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Link con href
+                            </a>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Button con data-bs-target
+                            </button>
+                        </p>
+                        <div class="collapse Q" id="collapseExample">
+                            <div class="card card-body">
+                                Contenido de marcador de posición para el componente de Collapse. Este panel está oculto
+                                por defecto,
+                                pero se revela cuando el usuario activa el disparador correspondiente.
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;p class="Q"&#62;
+    &#60;a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+        aria-expanded="false" aria-controls="collapseExample"&#62;
+        Link con href
+    &#60;/a&#62;
+    &#60;button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"&#62;
+        Button con data-bs-target
+    &#60;/button&#62;
+&#60;/p&#62;
+&#60;div class="collapse Q" id="collapseExample"&#62;
+    &#60;div class="card card-body"&#62;
+        Contenido de marcador de posición para el componente de Collapse. 
+        Este panel está oculto por defecto, pero se revela cuando el usuario activa el disparador correspondiente.
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Horizontal</h3>
+
+                    <p class="Q interlineado">
+                        Agregue la clase modificadora <b>.collapse-horizontal</b> para hacer la transición
+                        horizontalemente.
+                        <br>
+                        Puede especificar en el div principal el espacio apartador para la carta <b>style="min-height:
+                            120px;"</b>
+                        y puede especificar el tamaño del cuerpo de la carta <b>style="width: 300px;"</b>.
+                    </p>
+
+                    <p class="Q ignore">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExample" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Toggle width collapse
+                        </button>
+                    </p>
+                    <div class="Q ignore" style="min-height: 160px;">
+                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                            <div class="card card-body" style="width: 300px;">
+                                Este es un contenido de marcador de posición para un colapso horizontal.
+                                Está oculto de forma predeterminada y se muestra cuando se activa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code8">&#60;p class="Q"&#62;
+    &#60;button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseWidthExample" aria-expanded="false"
+        aria-controls="collapseWidthExample"&#62;
+        Toggle width collapse
+    &#60;/button&#62;
+&#60;/p&#62;
+&#60;div class="Q" style="min-height: 160px;"&#62;
+    &#60;div class="collapse collapse-horizontal" id="collapseWidthExample"&#62;
+        &#60;div class="card card-body" style="width: 300px;"&#62;
+            Este es un contenido de marcador de posición para un colapso horizontal. 
+            Está oculto de forma predeterminada y se muestra cuando se activa.
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code8" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Múltiples cartas</h3>
+
+                    <p class="Q interlineado">
+                        Un <b>&#60;button&#62;</b> o <b>&#60;a&#62;</b> puede mostrar y ocultar varios elementos
+                        haciendo referencia a ellos con un selector en su atributo <b>href</b> o <b>data-bs-target</b>.
+                        <br>
+                        Varios <b>&#60;button&#62;</b> o <b>&#60;a&#62;</b> pueden mostrar y ocultar un elemento si cada
+                        uno hace referencia a él con su atributo <b>href</b> o <b>data-bs-target</b>.
+                    </p>
+
+                    <p class="Q ignore">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample1">
+                            Toggle first element
+                        </a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                            aria-controls="multiCollapseExample2">
+                            Toggle second element
+                        </button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target=".multi-collapse" aria-expanded="false"
+                            aria-controls="multiCollapseExample1 multiCollapseExample2">
+                            Toggle both elements
+                        </button>
+                    </p>
+                    <div class="row Q ignore">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    Este primer panel está oculto por defecto, pero se revela cuando el usuario activa
+                                    el disparador correspondiente.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    Este segundo panel está oculto por defecto, pero se revela cuando el usuario activa
+                                    el disparador correspondiente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code9">&#60;p class="Q"&#62;
+    &#60;a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+        aria-expanded="false" aria-controls="multiCollapseExample1"&#62;
+        Toggle first element
+    &#60;/a&#62;
+    &#60;button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#multiCollapseExample2" aria-expanded="false"
+        aria-controls="multiCollapseExample2"&#62;
+        Toggle second element
+    &#60;/button&#62;
+    &#60;button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+        data-bs-target=".multi-collapse" aria-expanded="false"
+        aria-controls="multiCollapseExample1 multiCollapseExample2"&#62;
+        Toggle both elements
+    &#60;/button&#62;
+&#60;/p&#62;
+&#60;div class="row Q"&#62;
+    &#60;div class="col"&#62;
+        &#60;div class="collapse multi-collapse" id="multiCollapseExample1"&#62;
+            &#60;div class="card card-body"&#62;
+                Este primer panel está oculto por defecto, pero se revela cuando el usuario activa
+                el disparador correspondiente.
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="col"&#62;
+        &#60;div class="collapse multi-collapse" id="multiCollapseExample2"&#62;
+            &#60;div class="card card-body"&#62;
+                Este segundo panel está oculto por defecto, pero se revela cuando el usuario activa
+                el disparador correspondiente.
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code9" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="accordion">Accordion</h1><br>
+
+                    <p class="Q interlineado">
+                        Este componente sirve para mostrar contenido muy amplio, pero que de inicio de esta oculto.
+                        <br>
+                        Omita el atributo <b>data-bs-parent</b> en cada <b>.accordion-collapse</b> para que los
+                        elementos del acordeón permanezcan abiertos cuando se abre otro elemento.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+                        <div class="accordion Q" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button Q-bold" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <b>Este es el cuerpo de acordeón del primer elemento.</b>
+                                        Puede implementar casi cualquier codigo HTML dentro del <b>.accordion-body</b>,
+                                        aunque la transición limita el desbordamiento.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed Q-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <b>Este es el cuerpo de acordeón del segundo elemento.</b>
+                                        Puede implementar casi cualquier codigo HTML dentro del <b>.accordion-body</b>,
+                                        aunque la transición limita el desbordamiento.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed Q-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <b>Este es el cuerpo de acordeón del tercer elemento.</b>
+                                        Puede implementar casi cualquier codigo HTML dentro del <b>.accordion-body</b>,
+                                        aunque la transición limita el desbordamiento.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code10">&#60;div class="accordion Q" id="accordionExample"&#62;
+    &#60;div class="accordion-item"&#62;
+        &#60;h2 class="accordion-header" id="headingOne"&#62;
+            &#60;button class="accordion-button Q-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&#62;
+                Accordion Item #1
+            &#60;/button&#62;
+        &#60;/h2&#62;
+    &#60;div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"&#62;
+        &#60;div class="accordion-body"&#62;
+            &#60;b&#62;Este es el cuerpo de acordeón del tercer elemento.&#60;/b&#62;
+            Puede implementar casi cualquier codigo HTML dentro del &#60;b&#62;.accordion-body&#60;/b&#62;,
+            aunque la transición limita el desbordamiento.
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="accordion-item"&#62;
+        &#60;h2 class="accordion-header" id="headingTwo"&#62;
+            &#60;button class="accordion-button collapsed Q-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&#62;
+                Accordion Item #2
+            &#60;/button&#62;
+        &#60;/h2&#62;
+    &#60;div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"&#62;
+        &#60;div class="accordion-body"&#62;
+            &#60;b&#62;Este es el cuerpo de acordeón del tercer elemento.&#60;/b&#62;
+            Puede implementar casi cualquier codigo HTML dentro del &#60;b&#62;.accordion-body&#60;/b&#62;,
+            aunque la transición limita el desbordamiento.
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="accordion-item"&#62;
+        &#60;h2 class="accordion-header" id="headingThree"&#62;
+            &#60;button class="accordion-button collapsed Q-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&#62;
+            Accordion Item #3
+            &#60;/button&#62;
+        &#60;/h2&#62;
+    &#60;div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"&#62;
+            &#60;div class="accordion-body"&#62;
+                &#60;b&#62;Este es el cuerpo de acordeón del tercer elemento.&#60;/b&#62;
+                Puede implementar casi cualquier codigo HTML dentro del &#60;b&#62;.accordion-body&#60;/b&#62;,
+                aunque la transición limita el desbordamiento.
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code10" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Flush</h3>
+
+                    <p class="Q interlineado">
+                        Agregue <b>.accordion-flush</b> para eliminar el color de fondo predeterminado,
+                        algunos bordes y algunas esquinas redondeadas para renderizar acordeones de borde a borde con su
+                        contenedor principal.
+                    </p>
+
+                    <div class="content-muestra ignore">
+                        <div class="accordion accordion-flush Q" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed Q-bold" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Contenido de marcador de posición para este acordeón, que pretende demostrar la clase 
+                                        <b>.accordion-flush</b>. Este es el cuerpo de acordeón del primer elemento.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed Q-bold" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Contenido de marcador de posición para este acordeón, que pretende demostrar la clase 
+                                        <b>.accordion-flush</b>. Este es el cuerpo de acordeón del primer elemento.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br><br><br><br><br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group-vertical btn-flotante">
+            <a href="#" class="btn btn-primary Q">Badges</a>
+            <a href="#collapse" class="btn btn-primary Q">Collapse</a>
+            <a href="#accordion" class="btn btn-primary Q">Accordion</a>
+        </div>
+
+    <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+    <!--Implementacion de Animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Animaciones</h1><br>
+
+                    <p class="Q interlineado">
+                        Las animaciones proveen de dinamismo las pantallas de una aplicación.
+                        Se deben usar con cautela para no saturar de información visual innecesaria.
+
+                        <br>
+
+                        Puede utilizar animaciones preestablecidas de <b><a href="https://animate.style"
+                                target="_blank">Animate</a></b>,
+                        y gracias al script <b><a href="https://wowjs.uk" target="_blank">Wow</a></b>
+                        podra hacer que en automatico al hacer scroll, la animacion se muestre.
+                        <br>
+
+                        A continuacion mostraremos las referencias.
+                    </p><br>
+
+
+                    <div class="content-codigo">
+
+                        <PRE
+                            class="Q pre"><code id="code">&#60;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"&#62;</code></PRE>
+
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;script src="https://wowjs.uk/dist/wow.min.js"&#62;&#60;/script&#62;
+&#60;!-- Script para iniciar las animaciones --&#62;
+&#60;script&#62;
+    new WOW().init();
+&#60;/script&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Uso básico</h3><br>
+
+                    <p class="Q interlineado">
+                        Una vez referencias las cdn, se debe colocar la clase <b>.animate__animated</b>
+                        a los elementos que se desean animar.
+                        <br>
+
+                        Lo siguiente es colocar la clase de la animacion (se encuentran en el sitio oficial
+                        <b><a href="https://animate.style" target="_blank">Animate</a></b>), por
+                        ejemplo:
+                        <br>
+
+                        &#60;div class=<b>"animate__animated animate__bounce"</b>&#62;...&#60;/div&#62;
+                        <br>
+
+                        <div class="animate__animated animate__headShake animate__infinite">
+                            <button type="button" class="btn btn-primary Q">
+                                <ion-icon name="accessibility"></ion-icon> Ejemplo
+                            </button>
+                        </div>
+                    </p>
+
+                    <img src="../img/ilustraciones/pack-anima.png" width="95%">
+
+                    <br><br><br>
+
+                    <hr>
+
+                    <h3 class="Q">Clases de utilidad</h3>
+
+                    <p class="Q interlineado">
+                        <h5>Clases de retraso</h5>
+                        Puede utilizar alguna de las siguientes clases para retrasar la animacion entre 2 y 5 segundos.
+                        <br>
+                        <ul>
+                            <li><b>animate__delay-2s</b></li>
+                            <li><b>animate__delay-3s</b></li>
+                            <li><b>animate__delay-4s</b></li>
+                            <li><b>animate__delay-5s</b></li>
+                        </ul>
+                    </p>
+
+                    <p class="Q interlineado">
+                        <h5>Clases lentas y rápidas</h5>
+                        Puede utilizar alguna de las siguientes clases para alentar o acelerar la animacion.
+                        <br>
+                        <ul>
+                            <li><b>animate__slow</b> (2 seg)</li>
+                            <li><b>animate__slower</b> (3 seg)</li>
+                            <li><b>animate__fast</b> (800 ms)</li>
+                            <li><b>animate__faster</b> (500 ms)</li>
+                        </ul>
+                    </p>
+
+                    <p class="Q interlineado">
+                        <h5>Clases de repetición</h5>
+                        Puede utilizar alguna de las siguientes clases para repetir la animacion 1, 2, 3 o repetición
+                        infinita.
+                        <br>
+                        <ul>
+                            <li><b>animate__repeat-1</b></li>
+                            <li><b>animate__repeat-2</b></li>
+                            <li><b>animate__repeat-3</b></li>
+                            <li><b>animate__infinite</b></li>
+                        </ul>
+                    </p>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Animaciones al hacer scroll</h3>
+
+                    <p class="Q interlineado">
+                        Puede utilizar la clase <b>.wow</b> y en automatico a hacer scroll se animara al entrar en
+                        pantalla, por ejemplo:
+                        <br>
+
+                        &#60;div class=<b>"wow animate__animated animate__bounce"</b>&#62;...&#60;/div&#62;
+                        <br>
+                        <div class="wow animate__animated animate__bounce">
+                            <button type="button" class="btn btn-primary Q">
+                                <ion-icon name="accessibility"></ion-icon> Ejemplo
+                            </button>
+                        </div>
+                    </p>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+    <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

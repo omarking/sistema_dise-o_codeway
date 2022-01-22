@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="cards.html">
+                    <li class="Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Datetimepicker</h1><br>
+
+                    <p class="Q interlineado">
+                        El control Datetimepicker permite seleccionar un solo elemento de una lista de fechas u horas.
+                    </p><br>
+
+                    <h3 class="Q">Ejemplo simple</h3><br>
+
+                    <input type="datetime-local" id="datetime-local" class="btn btn-light Q">
+                    <input type="date" id="date" class="btn btn-light Q">
+                    <input type="time" id="time" class="btn btn-light Q">
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;input type="datetime-local" id="datetime-local" class="btn btn-light Q"&#62;
+&#60;input type="date" id="date" class="btn btn-light Q"&#62;
+&#60;input type="time" id="time" class="btn btn-light Q"&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplo con bordes</h3>
+
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.dtp-*</b>con el color contextual para tener bordes.
+                    </p><br>
+
+                    <input type="datetime-local" id="datetime-local" class="btn dtp-primary Q">
+                    <input type="datetime-local" id="datetime-local" class="btn dtp-secondary Q">
+                    <input type="datetime-local" id="datetime-local" class="btn dtp-success Q">
+                    <br><br>
+                    <input type="datetime-local" id="datetime-local" class="btn dtp-danger Q">
+                    <input type="datetime-local" id="datetime-local" class="btn dtp-warning Q">
+                    <input type="datetime-local" id="datetime-local" class="btn dtp-info Q">
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;input type="datetime-local" id="datetime-local" class="btn dtp-primary Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn dtp-secondary Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn dtp-success Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn dtp-danger Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn dtp-warning Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn dtp-info Q"&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h3 class="Q">Ejemplo tipo botón</h3>
+
+                    <p class="Q interlineado">
+                        Puede agregar la clase <b>.btn-*</b>con el color contextual para tener una apariencia de botón.
+                    </p><br>
+
+                    <input type="datetime-local" id="datetime-local" class="btn btn-primary Q">
+                    <input type="datetime-local" id="datetime-local" class="btn btn-secondary Q">
+                    <input type="datetime-local" id="datetime-local" class="btn btn-success Q">
+                    <br><br>
+                    <input type="datetime-local" id="datetime-local" class="btn btn-danger Q">
+                    <input type="datetime-local" id="datetime-local" class="btn btn-warning Q">
+                    <input type="datetime-local" id="datetime-local" class="btn btn-info Q">
+
+                    <br><br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;input type="datetime-local" id="datetime-local" class="btn btn-primary Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn btn-secondary Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn btn-success Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn btn-danger Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn btn-warning Q"&#62;
+&#60;input type="datetime-local" id="datetime-local" class="btn btn-info Q"&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+        <!--Implementacion del boton switch-->
+        <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diseño WEB</title>
+    <link rel="shortcut icon" href="../img/logos/icono.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CODEWAY CSS -->
+    <link href="../css/codeway.css" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link href="../css/templates/dashboard.css" rel="stylesheet">
+    <!--Implementacion de Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Implementacion del modo oscuro-->
+    <link href="../css/templates/light.css" rel="stylesheet" id='theme'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidenav Dashboard -->
+    <div class="sidenav-dash d-none d-md-block">
+        <div class="sidenav-info">
+            <div class="row menu-icon">
+                <div class="col">
+                    <a href="../index.html" class="icon-back">
+                        <ion-icon name="arrow-back" class="icon-black"></ion-icon>
+                    </a>
+                </div>
+                <div class="col">
+                    <!--SWITCH-->
+                    <label class="switch">
+                        <input type="checkbox" class='checkbox' id="switch">
+                        <span class="slider round">
+                            <ion-icon name="sunny" class="icon-switch"></ion-icon>
+                            <ion-icon name="moon" class="icon-switch"></ion-icon>
+                        </span>
+                    </label>
+
+                </div>
+                <div class="col">
+                    <a href="../file/bootstrap-codeway.css" download="booststrap-codeway.css" class="icon">
+                        <ion-icon name="cloud-download" class="icon"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <br><img src="../img/logos/Imagotipo_Dark.png" width="200px" class="isologo" id="logo">
+            <h5 class="Q-bold tema"></h5>
+
+        </div>
+
+        <div class="sidenav-menu">
+            <ul class="list-l3">
+                <a href="iniciar.html">
+                    <li class="Q-bold">
+                        Antes de iniciar
+                    </li>
+                </a>
+                <a href="paleta.html">
+                    <li class="Q-bold">
+                        Paleta de color
+                    </li>
+                </a>
+                <a href="tipografia.html">
+                    <li class="Q-bold">
+                        Tipografia
+                    </li>
+                </a>
+                <a href="iconografia.html">
+                    <li class="Q-bold">
+                        Iconografia
+                    </li>
+                </a>
+                <a href="grafico.html">
+                    <li class="Q-bold">
+                        Estilo grafico
+                    </li>
+                </a>
+                <a href="button.html">
+                    <li class="Q-bold">
+                        Buttons
+                    </li>
+                </a>
+                <a href="list.html">
+                    <li class="Q-bold">
+                        List
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li class="Q-bold">
+                        Forms
+                    </li>
+                </a>
+                <a href="date.html">
+                    <li class="Q-bold">
+                        Datetimepicker
+                    </li>
+                </a>
+                <a href="badge.html">
+                    <li class="Q-bold">
+                        Badges y Collapse
+                    </li>
+                </a>
+                <a href="progress.html">
+                    <li class="Q-bold">
+                        Progres bar y Loader
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active Q-bold">
+                        Jumbotron y Cards
+                    </li>
+                </a>
+                <a href="table.html">
+                    <li class="Q-bold">
+                        Tables
+                    </li>
+                </a>
+                <a href="carrusel.html">
+                    <li class="Q-bold">
+                        Carrusel
+                    </li>
+                </a>
+                <a href="modal.html">
+                    <li class="Q-bold">
+                        Modales y Alerts
+                    </li>
+                </a>
+                <a href="anima.html">
+                    <li class="Q-bold">
+                        Animaciones
+                    </li>
+                </a>
+                <a href="plantilla.html">
+                    <li class="Q-bold">
+                        Plantillas
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Contenido Dashboard -->
+    <script>
+        var clipboard = new ClipboardJS('.btn-copy');
+
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+        });
+    </script>
+
+    <div class="contenido-dash">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contenido-body">
+                    <h1 class="L-bold titulo">Jumbotron</h1><br>
+                    <p class="Q interlineado">
+                        Se utiliza para resaltar algún contenido o información especial.
+                        <br>
+                        Puede utilizar la clase <b>.jumbotron-l1</b>, <b>.jumbotron-l2</b> o <b>.jumbotron-l3</b> para
+                        tener un estilo simple.
+                    </p><br>
+
+                    <h5 class="Q">Ejemplo simple:</h5><br>
+
+                    <div class="content-muestra">
+                        <div class="jumbotron-l1">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron-l2">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron-l3">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code">&#60;!--Jumbotron primary (jumbotron-l1)--&#62;
+&#60;div class="jumbotron-l1 Q"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;!--Jumbotron (jumbotron-l2)--&#62;
+&#60;div class="jumbotron-l2 Q"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;!--Jumbotron primary (jumbotron-l3)--&#62;
+&#60;div class="jumbotron-l3 Q"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo contextual:</h5><br>
+
+
+                    <p class="Q interlineado">
+                        Puede cambiar los colores especificando con las clases <b>.bg-*</b> y <b>.text-*</b> en la clase
+                        <b>.jumbotron</b>.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="jumbotron bg-primary text-light">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-secondary text-light">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-success text-light">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-danger text-light">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-warning">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-info text-light">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-light ignore">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                        <br>
+                        <div class="jumbotron bg-dark text-light">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead Q">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code2">&#60;div class="jumbotron bg-primary text-light"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-secondary text-light"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-success text-light"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-danger text-light"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-warning"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-info text-light"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-light&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div class="jumbotron bg-dark text-light"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead Q"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code2" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo con imagen:</h5><br>
+
+
+                    <p class="Q interlineado">
+                        Puede cambiar el fondo por una imagen con el estilo css <b>style="background-image:url()"</b>
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <!--<div class="jumbotron" style="background-image:url(https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); background-size: cover;">-->
+                        <div class="jumbotron text-light Q"
+                            style="background-image:url(../img/ilustraciones/pexels-engin-akyurt-1435752.jpg); background-size: cover;">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code3">&#60;div class="jumbotron Q" style="background-image:url()"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code3" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo completo:</h5><br>
+
+
+                    <p class="Q interlineado">
+                        Puede combinar los aspectos anteriores y agregar mas elementos.
+                    </p><br>
+
+                    <div class="content-muestra">
+                        <div class="jumbotron-l3 Q">
+                            <h1 class="display-4 L-bold">Hello, world!</h1>
+                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling
+                                extra attention to featured content or information.</p>
+                            <hr class="my-4">
+                            <p>It uses utility classes for typography and spacing to space content out within the larger
+                                container.</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code4">&#60;div class="jumbotron-l3 Q"&#62;
+    &#60;h1 class="display-4 L-bold"&#62;Hello, world!&#60;/h1&#62;
+    &#60;p class="lead"&#62;This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.&#60;/p&#62;
+    &#60;hr class="my-4"&#62;
+    &#60;p&#62;It uses utility classes for typography and spacing to space content out within the larger
+        container.&#60;/p&#62;
+    &#60;p&#62;
+        &#60;a class="btn btn-primary btn-lg" href="#" role="button"&#62;Learn more&#60;/a&#62;
+    &#60;/p&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code4" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h1 class="L-bold titulo" id="card">Cards</h1><br>
+
+                    <p class="Q interlineado">
+                        Las tarjetas se crean con la menor cantidad de marcas y estilos posibles, 
+                        pero aún así logran ofrecer un montón de control y personalización.
+                        <br>
+                        Puede colocar el estilo <b>style="width: *rem;"</b> para establecer un tamaño especifico,
+                        si no es especificado, se tomara el 100% de su contenedor.
+                    </p>
+
+                    <div class="content-muestra Q ignore">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../img/ilustraciones/pexels-kevin-ku-577585.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title L-bold">Card title</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code5">&#60;div class="card Q" style="width: 18rem;"&#62;
+    &#60;img src="..." class="card-img-top" alt="..."&#62;
+    &#60;div class="card-body"&#62;
+        &#60;h5 class="card-title L-bold"&#62;Card title&#60;/h5&#62;
+        &#60;h6 class="card-subtitle mb-2 text-muted"&#62;Card subtitle&#60;/h6&#62;
+        &#60;p class="card-text"&#62;Some quick example text to build on the card title and make up the
+            bulk of the card's content.&#60;/p&#62;
+        &#60;a href="#" class="btn btn-primary"&#62;Go somewhere&#60;/a&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code5" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo completo:</h5><br>
+
+
+                    <p class="Q interlineado">
+                        Todas las cards pueden tener un <b>header</b>, <b>body</b> y <b>footer</b>.
+                    </p><br>
+
+                    <div class="content-muestra ignore">
+                        <div class="card text-center Q">
+                            <div class="card-header L-bold">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer text-muted">
+                                2 days ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code6">&#60;div class="card text-center Q"&#62;
+    &#60;div class="card-header L-bold"&#62;
+        Header
+    &#60;/div&#62;
+    &#60;div class="card-body"&#62;
+        &#60;h5 class="card-title"&#62;Special title treatment&#60;/h5&#62;
+        &#60;p class="card-text"&#62;With supporting text below as a natural lead-in to additional
+            content.&#60;/p&#62;
+        &#60;a href="#" class="btn btn-primary"&#62;Go somewhere&#60;/a&#62;
+    &#60;/div&#62;
+    &#60;div class="card-footer text-muted"&#62;
+        2 days ago
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code6" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo de alineacion</h5><br>
+
+
+                    <p class="Q interlineado">
+                        Puede cambiar la orientacion de los textos con las clases: <br>
+                        <ul>
+                            <li><b>text-center</b></li>
+                            <li><b>text-end</b></li>
+                        </ul>
+                    </p>
+
+                    <div class="content-muestra Q ignore">
+                        <div class="card" style="width: 15rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card text-center" style="width: 15rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card text-end" style="width: 15rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo horizontal</h5><br>
+
+
+                    <p class="Q interlineado">
+                        En este caso puede utilizar un arreglo de columnas y grids con las clases
+                        <b>.g-0</b> y <b>.col-md-*</b>
+                        <br>
+                        Puede modificar el estilo css <b>style="max-width: 540px;"</b> al tamaño que necesite,
+                        si lo elimina el Card tomara el 100% de su contenedor.
+                    </p><br>
+
+                    <div class="content-muestra Q ignore">
+                        <div class="card mb-3 Q" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/ilustraciones/pexels-pavel-danilyuk-5496463.jpg" class="img-fluid rounded-start"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title L-bold">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="content-codigo">
+                        <PRE class="Q pre">
+<code id="code7">&#60;div class="card mb-3 Q" style="max-width: 540px;"&#62;
+    &#60;div class="row g-0"&#62;
+        &#60;div class="col-md-4"&#62;
+            &#60;img src="..." class="img-fluid rounded-start" alt="..."&#62;
+        &#60;/div&#62;
+        &#60;div class="col-md-8"&#62;
+            &#60;div class="card-body"&#62;
+                &#60;h5 class="card-title L-bold"&#62;Card title&#60;/h5&#62;
+                &#60;p class="card-text"&#62;
+                    This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a little bit longer.
+                &#60;/p&#62;
+                &#60;p class="card-text"&#62;
+                    &#60;small class="text-muted"&#62;Last updated 3 mins ago&#60;/small&#62;
+                &#60;/p&#62;
+            &#60;/div&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</code></PRE>
+                        <button class="btn btn-primary btn-copy" data-clipboard-action="copy"
+                            data-clipboard-target="#code7" id="copy-button" onclick="copiado()">
+                            <ion-icon name="documents"></ion-icon>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <hr>
+
+                    <h5 class="Q">Ejemplo de colores</h5><br>
+
+
+                    <p class="Q interlineado">
+                        Puede modificar los colores de fondo, los textos o los borders con las clases:
+                        <ul>
+                            <li><b>bg-*</b></li>
+                            <li><b>text-*</b></li>
+                            <li><b>border-*</b></li>
+                        </ul>
+                    </p><br>
+
+                    <div class="content-muestra Q ignore">
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Primary card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Secondary card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Success card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Danger card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Warning card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Info card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Light card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dark card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body text-primary">
+                                        <h5 class="card-title">Primary card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body text-secondary">
+                                        <h5 class="card-title">Secondary card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-success mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-title">Success card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body text-danger">
+                                        <h5 class="card-title">Danger card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-warning mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Warning card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-info mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Info card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-light mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Light card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card border-dark mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Header</div>
+                                    <div class="card-body text-dark">
+                                        <h5 class="card-title">Dark card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!--Fin de elementos-->
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group-vertical btn-flotante">
+            <a href="#" class="btn btn-primary Q">Jumbotron</a>
+            <a href="#card" class="btn btn-primary Q">Cards</a>
+        </div>
+
+            <!--Implementacion del boton switch-->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
